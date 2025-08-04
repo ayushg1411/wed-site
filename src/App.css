@@ -36,3 +36,73 @@
     transform: rotate(360deg);
   }
 }
+.app {
+  min-height: 100vh;
+}
+
+.main-content {
+  padding-top: 70px; /* Account for fixed header */
+}
+
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-align: center;
+  padding: 6rem 2rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin: 0 0 1rem 0;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.content-block {
+  margin-bottom: 3rem;
+}
+
+.content-block h2 {
+  font-size: 2rem;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.content-block p {
+  color: #4a5568;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding-top: 60px;
+  }
+  
+  .hero {
+    padding: 4rem 1rem;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero p {
+    font-size: 1.1rem;
+  }
+  
+  .content {
+    padding: 2rem 1rem;
+  }
+}
