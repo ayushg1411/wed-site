@@ -38,7 +38,7 @@ export const VideoGrid: React.FC<VideoGridProps> = ({
                   <p className="video-grid__description">{video.description}</p>
                 )}
                 {video.duration && (
-                  <span className="video-grid__duration"  onClick={() => handleBookNow(video.id)}>{video.duration}</span>
+                  <span className="video-grid__duration"  onClick={() => handleBookNow(video.id)}>Book</span>
                 )}
               </div>
             </div>
