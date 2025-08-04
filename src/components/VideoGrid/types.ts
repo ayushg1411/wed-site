@@ -11,3 +11,9 @@ export interface VideoGridProps {
   title?: string;
   className?: string;
 }
+
+export interface VideoPlayerProps {
+  vimeoId: string;
+  title: string;
+  className?: string;
+}

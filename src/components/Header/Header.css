@@ -16,7 +16,7 @@
 }
 
 .header__container {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
   padding: 0 2rem;
   display: flex;
@@ -148,6 +148,11 @@
   .navigation__link {
     font-size: 0.9rem;
   }
+
+  .navigation__item--active .navigation__link {
+  border-bottom: 3px solid #1976d2;
+  color: #1976d2;
+}
   
   .header__actions {
     gap: 0.5rem;

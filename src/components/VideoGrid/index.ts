@@ -1,2 +1,3 @@
 export { VideoGrid } from './VideoGrid';
-export type { VideoGridProps, Video } from './types';
+export { VideoPlayer } from './VideoPlayer';
+export type { VideoGridProps, Video, VideoPlayerProps } from './types';

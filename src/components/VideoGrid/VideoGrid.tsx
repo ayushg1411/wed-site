@@ -1,5 +1,6 @@
 import React from 'react';
 import { VideoGridProps } from './types';
+import { VideoPlayer } from './VideoPlayer';
 import './VideoGrid.css';
 
 export const VideoGrid: React.FC<VideoGridProps> = ({
@@ -20,14 +21,11 @@ export const VideoGrid: React.FC<VideoGridProps> = ({
           {videos.map((video, index) => (
             <div key={video.id} className={`video-grid__item video-grid__item--${index + 1}`}>
               <div className="video-grid__wrapper">
-                <iframe
-                  src={`https://player.vimeo.com/video/${video.vimeoId}?badge=0&autopause=0&player_id=0&app_id=58479`}
-                  frameBorder="0"
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  allowFullScreen
+                <VideoPlayer
+                  vimeoId={video.vimeoId}
                   title={video.title}
-                  className="video-grid__iframe"
-                ></iframe>
+                  className="video-grid__player"
+                />
               </div>
               
               <div className="video-grid__info">
