@@ -8,6 +8,10 @@ export const VideoGrid: React.FC<VideoGridProps> = ({
   title = "Featured Videos",
   className
 }) => {
+
+   const handleBookNow = (videoId: string) => {
+    window.location.href = `/order/${videoId}`;
+  };
   return (
     <section className={`video-grid ${className || ''}`}>
       <div className="video-grid__container">
@@ -34,7 +38,7 @@ export const VideoGrid: React.FC<VideoGridProps> = ({
                   <p className="video-grid__description">{video.description}</p>
                 )}
                 {video.duration && (
-                  <span className="video-grid__duration">{video.duration}</span>
+                  <span className="video-grid__duration"  onClick={() => handleBookNow(video.id)}>{video.duration}</span>
                 )}
               </div>
             </div>

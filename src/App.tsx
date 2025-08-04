@@ -1,8 +1,10 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import { Header } from './components/Header/Header';
 import { Footer } from './components/Footer';
 import { VideoGrid } from './components/VideoGrid';
+import { OrderPage } from './pages/OrderPage';
 import { AuthProvider } from './contexts/AuthContext';
 
 const sampleVideos = [
@@ -29,28 +31,39 @@ const sampleVideos = [
   }
 ];
 
+function HomePage() {
+  return (
+    <>
+      <section className="hero">
+        <h1>Welcome to Gathbandhan</h1>
+        <p>Because Every Love Story Deserves a Beautiful Beginning</p>
+      </section>
+      
+      <VideoGrid 
+        videos={sampleVideos}
+        title="Digital Wedding Invitations"
+      />
+    </>
+  );
+}
+
 function App() {
   return (
     <AuthProvider>
-      <div className="app">
-        <Header />
-        
-       
-          <section className="hero">
-            <h1>Welcome to Gathbandhan</h1>
-            <p>Because Every Love Story Deserves a Beautiful Beginning</p>
-          </section>
+      <Router>
+        <div className="app">
+          <Header />
           
-          <VideoGrid 
-            videos={sampleVideos}
-            title="Digital Wedding Invitations"
-          />
+          <main className="main-content">
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/order/:videoId" element={<OrderPage />} />
+            </Routes>
+          </main>
           
-     
-
-        
-        <Footer />
-      </div>
+          <Footer />
+        </div>
+      </Router>
     </AuthProvider>
   );
 }
