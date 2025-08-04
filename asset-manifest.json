@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/wed-site/static/css/main.063e3d0a.css",
+    "main.js": "/wed-site/static/js/main.3c9cd11f.js",
+    "static/js/453.ebdab4a5.chunk.js": "/wed-site/static/js/453.ebdab4a5.chunk.js",
+    "index.html": "/wed-site/index.html",
+    "main.063e3d0a.css.map": "/wed-site/static/css/main.063e3d0a.css.map",
+    "main.3c9cd11f.js.map": "/wed-site/static/js/main.3c9cd11f.js.map",
+    "453.ebdab4a5.chunk.js.map": "/wed-site/static/js/453.ebdab4a5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.063e3d0a.css",
+    "static/js/main.3c9cd11f.js"
+  ]
+}
