@@ -4,12 +4,43 @@ import './Footer.css';
 export const Footer: React.FC = () => {
   const [email, setEmail] = useState('');
 
-  const handleSubscribe = (e: React.FormEvent) => {
+  const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
     // Handle subscription logic here
     console.log('Subscribing email:', email);
-    setEmail('');
+    try {
+      const urlEncodedBody = new URLSearchParams({
+       mobile : email
+      }).toString();
+      setEmail('');
+      const url =
+        'https://script.google.com/macros/s/AKfycbzb_rv4ebhWQHasN0kAH9Mnx9kY-Fcr8Z1js0lrc6Y3fBIMu7Wk2x0Xm_b3CCtxUV4J/exec';
+
+      const response = await fetch(url, {
+        method: 'POST',
+        body: urlEncodedBody,
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+      });
+
+      if (response.ok) {
+       
+        setEmail(
+        ''
+        );
+      } else {
+        throw new Error('Failed to submit form');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+     
+    } finally {
+      setEmail('');
+    }
+    
   };
+
 
   return (
     <footer className="footer">
@@ -23,7 +54,7 @@ export const Footer: React.FC = () => {
           
           <form className="footer__newsletter-form" onSubmit={handleSubscribe}>
             <input
-              type="email"
+              type="text"
               placeholder="Enter your number"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -93,7 +124,7 @@ export const Footer: React.FC = () => {
               <ul className="footer__links">
                 <li><a href="/privacy" className="footer__link">Privacy Policy</a></li>
                 <li><a href="/terms" className="footer__link">Terms of Service</a></li>
-                <li><a href="/refund" className="footer__link">Refund Policy</a></li>
+               
               </ul>
             </div>
           </div>

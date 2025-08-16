@@ -59,33 +59,51 @@
 }
 
 .video-grid__info {
-  padding: 2rem;
+  padding: 1rem;
+  background: #F7F8FC
 }
 
 .video-grid__video-title {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: #2d3748;
-  margin: 0 0 0.75rem 0;
-  line-height: 1.4;
+  margin: 0 0 0.5rem 0;
+  line-height: 1;
 }
 
 .video-grid__description {
-  color: #718096;
+  color: #000000;
+  font-size: 0.8rem;
+  line-height: 1.2;
+  margin: 0 0 1rem 0;
+}
+
+.video-grid__detail {
+  color: #000000;
   font-size: 1rem;
-  line-height: 1.6;
-  margin: 0 0 1.25rem 0;
+  line-height: 1.2;
+  margin: 0 0 1rem 0;
 }
 
 .video-grid__duration {
   display: inline-block;
-  background: #edf2f7;
-  color: #4a5568;
-  padding: 0.4rem 1rem;
-  border-radius: 25px;
+  background: #003d7a;
+  color: #ffffff;
+  padding: 0.6rem 1rem;
+  border-radius: 12px;
   font-size: 0.85rem;
   font-weight: 500;
   cursor: pointer;
+}
+
+.detail-cnt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detail-style {
+  color: 'red'
 }
 
 /* Large Desktop View */

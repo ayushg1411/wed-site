@@ -10,9 +10,7 @@ import './Header.css';
 export const Header: React.FC<HeaderProps> = ({
   logo = { text: 'Gathbandhan', href: '/' },
   navigationItems = [
-    { label: 'About', href: '/about' },
-    { label: 'Features', href: '/features' },
-    { label: 'Pricing', href: '/pricing' }
+    { label: 'Wedding', href: '/Wedding' }
   ],
   scrollThreshold = 50,
   className
@@ -59,14 +57,10 @@ export const Header: React.FC<HeaderProps> = ({
     : [
         { 
           label: 'Login', 
-          variant: 'secondary' as const,
+          variant: 'primary' as const,
           onClick: handleLoginClick 
         },
-        { 
-          label: 'Start selling', 
-          variant: 'primary' as const,
-          href: '/signup' 
-        }
+        
       ];
 
   return (

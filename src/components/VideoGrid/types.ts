@@ -4,6 +4,8 @@ export interface Video {
   title: string;
   description?: string;
   duration?: string;
+  price:string;
+  pages:number;
 }
 
 export interface VideoGridProps {
@@ -16,4 +18,5 @@ export interface VideoPlayerProps {
   vimeoId: string;
   title?: string;
   className?: string;
+  
 }

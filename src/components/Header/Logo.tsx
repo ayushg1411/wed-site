@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from '../../assests/logog.png'
 
 interface LogoProps {
   text: string;
@@ -8,9 +9,7 @@ interface LogoProps {
 export const Logo: React.FC<LogoProps> = ({ text, href }) => {
   return (
     <div className="header__logo">
-      <a href={href} className="logo__link">
-        {text}
-      </a>
+      <img width='250px' height={70} src={logo} alt="" />
     </div>
   );
 };

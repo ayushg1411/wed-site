@@ -34,6 +34,7 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ buttons }) => {
             key={index}
             onClick={button.onClick}
             className={className}
+            style={{fontWeight:700}}
           >
             {button.label}
           </button>

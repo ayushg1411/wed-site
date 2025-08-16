@@ -25,7 +25,7 @@ const sampleVideos = [
   {
     id: '1',
     vimeoId: '1107234012',
-    title: 'Getting Started Guide',
+    title: 'Getting Started Guidedfs',
     description: 'Learn how to create your first digital wedding invitation',
     duration: '3:45'
   },

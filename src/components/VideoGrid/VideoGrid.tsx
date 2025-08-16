@@ -6,7 +6,7 @@ import './VideoGrid.css';
 export const VideoGrid: React.FC<VideoGridProps> = ({
   videos,
   title = "Featured Videos",
-  className
+  className,
 }) => {
 
    const handleBookNow = (videoId: string) => {
@@ -37,8 +37,13 @@ export const VideoGrid: React.FC<VideoGridProps> = ({
                 {video.description && (
                   <p className="video-grid__description">{video.description}</p>
                 )}
+                  <div className='detail-cnt'>
+                  <p className="video-grid__detail" >Pages<span className='detail-style' style={{color:"green",fontWeight:500}} > {video.pages}</span></p>
+                  <p className="video-grid__detail">Price <span className='detail-style' style={{color:"green", fontWeight:500}}>Rs.{video.price}</span></p>
+                  </div>
+
                 {video.duration && (
-                  <span className="video-grid__duration"  onClick={() => handleBookNow(video.id)}>Book</span>
+                  <span className="video-grid__duration"  onClick={() => handleBookNow(video.id)}>Order</span>
                 )}
               </div>
             </div>
