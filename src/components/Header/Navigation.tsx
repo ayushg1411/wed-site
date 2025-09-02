@@ -31,14 +31,14 @@ export const Navigation: React.FC<NavigationProps> = ({ items }) => {
   const getDropdownItems = (label: string): DropdownItem[] => {
     const dropdownData: Record<string, DropdownItem[]> = {
       'Wedding': [
-        { label: 'Save The Date', href: 'weddingt/story', description: 'Learn about our journey' },
-        { label: 'Engagement Ceremony', href: 'weddingt/team', description: 'Meet our talented team' },
-        { label: 'Haldi Ceremony', href: 'weddingt/mission', description: 'Our vision and values' },
-        { label: 'Mehandi Ceremony', href: 'weddingt/careers', description: 'Join our growing team' },
-        { label: 'Countdown Card', href: 'weddingt/press', description: 'Latest news and updates' },
-        { label: 'Wedding logo', href: 'weddingt/contact', description: 'Get in touch with us' },
-         { label: 'Destination Wedding Video', href: 'weddingt/contact', description: 'Get in touch with us' },
-          { label: 'Premium Card Video', href: 'weddingt/contact', description: 'Get in touch with us' },
+        { label: 'Save The Date', href: '/wedding/story', description: 'Learn about our journey' },
+        { label: 'Engagement Ceremony', href: '/wedding/team', description: 'Meet our talented team' },
+        { label: 'Haldi Ceremony', href: '/wedding/mission', description: 'Our vision and values' },
+        { label: 'Mehandi Ceremony', href: '/wedding/careers', description: 'Join our growing team' },
+        { label: 'Countdown Card', href: '/wedding/press', description: 'Latest news and updates' },
+        { label: 'Wedding logo', href: '/wedding/contact', description: 'Get in touch with us' },
+         { label: 'Destination Wedding Video', href: '/wedding/contact', description: 'Get in touch with us' },
+          { label: 'Premium Card Video', href: '/wedding/contact', description: 'Get in touch with us' },
       ],
       'Features': [
         { label: 'Video Templates', href: '/features/templates', description: 'Beautiful pre-made designs' },
@@ -80,8 +80,8 @@ export const Navigation: React.FC<NavigationProps> = ({ items }) => {
                 {hasDropdown && (
                   <svg 
                     className={`navigation__dropdown-icon ${activeDropdown === index ? 'navigation__dropdown-icon--active' : ''}`}
-                    width="12" 
-                    height="12" 
+                    width="14" 
+                    height="14" 
                     viewBox="0 0 12 12" 
                     fill="currentColor"
                   >

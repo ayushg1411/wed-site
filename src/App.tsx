@@ -6,6 +6,8 @@ import { Footer } from './components/Footer';
 import { VideoGrid } from './components/VideoGrid';
 import { OrderPage } from './pages/OrderPage';
 import { AuthProvider } from './contexts/AuthContext';
+import SaveDate from './categories/SaveDate';
+import { CATEGORIES } from './constatnts/Categories';
 
 const sampleVideos = [
   {
@@ -15,7 +17,8 @@ const sampleVideos = [
     description: 'Learn how to create your first digital wedding invitation',
     duration: '3:45',
     pages: 3,
-    price: '699'
+    price: '699',
+    category: CATEGORIES.WEDDING
   },
   {
     id: '2',
@@ -24,7 +27,8 @@ const sampleVideos = [
     description: 'Discover powerful tools to grow your business',
     duration: '5:20',
       pages: 3,
-    price: '699'
+    price: '699',
+    category: CATEGORIES.WEDDING
   },
   {
     id: '3',
@@ -33,7 +37,8 @@ const sampleVideos = [
     description: 'See how other businesses thrive with our platform',
     duration: '4:15',
       pages: 3,
-    price: '699'
+    price: '699',
+    category: CATEGORIES.BUSINESS
   }
 ];
 
@@ -65,6 +70,7 @@ function App() {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/order/:videoId" element={<OrderPage />} />
+               <Route path="/wedding/:category" element={<SaveDate />} />
             </Routes>
           </main>
           
