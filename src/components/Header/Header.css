@@ -5,7 +5,6 @@
   right: 0;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   z-index: 1000;
   transition: all 0.3s ease;
 }
@@ -22,7 +21,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 70px;
+  height: 80px;
 }
 
 /* Logo */
@@ -78,10 +77,10 @@
 }
 
 .navigation__link {
-  color: #41444a;
-  font-size: 24px;
+  color: rgb(34, 39, 51);
+  font-size: 20px;
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 500;
   padding: 0.5rem 0;
   position: relative;
   transition: color 0.2s ease;

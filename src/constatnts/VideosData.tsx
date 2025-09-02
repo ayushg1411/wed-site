@@ -3,7 +3,7 @@ export const sampleVideos = [
   {
     id: '1',
     vimeoId: '1107234012',
-    title: 'Getting Started Guide',
+    title: 'Traditional Radha  dsf sdf sdf dsfds fsd Krishna Wedding Invitation Video – A Fairytale of Love',
     description: 'Learn how to create your first digital wedding invitation',
     duration: '3:45',
     pages: 3,

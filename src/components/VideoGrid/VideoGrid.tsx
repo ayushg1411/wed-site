@@ -32,7 +32,7 @@ export const VideoGrid: React.FC<VideoGridProps> = ({
                 />
               </div>
               
-              <div className="video-grid__info">
+              <div onClick={() => handleBookNow(video.id)} className="video-grid__info">
                 <h3 className="video-grid__video-title">{video.title}</h3>
                 {video.description && (
                   <p className="video-grid__description">{video.description}</p>
@@ -43,7 +43,7 @@ export const VideoGrid: React.FC<VideoGridProps> = ({
                   </div>
 
                 {video.duration && (
-                  <span className="video-grid__duration"  onClick={() => handleBookNow(video.id)}>Order</span>
+                  <span className="video-grid__duration" >Order</span>
                 )}
               </div>
             </div>

@@ -1,5 +1,5 @@
 .video-grid {
-  padding: 4rem 0;
+  padding: 1.5rem 0;
   background: #f8fafc;
 }
 
@@ -16,7 +16,7 @@
 
 .video-grid__title {
   font-size: 2.5rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #1a202c;
   margin: 0;
 }
@@ -60,11 +60,19 @@
 
 .video-grid__info {
   padding: 1rem;
-  background: #F7F8FC
+  background: #F7F8FC;
+  cursor: pointer;
 }
 
 .video-grid__video-title {
-  font-size: 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0 0 0.5rem 0;
+  line-height: 1;
+}
+.video-grid__video-price {
+  font-size: 0.9rem;
   font-weight: 600;
   color: #2d3748;
   margin: 0 0 0.5rem 0;
@@ -75,7 +83,7 @@
   color: #000000;
   font-size: 0.8rem;
   line-height: 1.2;
-  margin: 0 0 1rem 0;
+  /* margin: 0 0 1rem 0; */
 }
 
 .video-grid__detail {
@@ -117,11 +125,14 @@
   }
   
   .video-grid__video-title {
-    font-size: 1.5rem;
+    font-size: 1rem;
+  }
+    .video-grid__video-price {
+    font-size: 1rem;
   }
   
   .video-grid__description {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -170,7 +181,7 @@
   
   .video-grid__item {
     min-width: unset;
-    width: 80vw;
+    width: 100vw;
     margin: 0 auto;
   }
   
@@ -191,6 +202,9 @@
   }
   
   .video-grid__video-title {
+    font-size: 1.2rem;
+  }
+    .video-grid__video-price {
     font-size: 1.2rem;
   }
   
@@ -231,6 +245,9 @@
   }
   
   .video-grid__video-title {
+    font-size: 1.1rem;
+  }
+    .video-grid__video-price {
     font-size: 1.1rem;
   }
 }

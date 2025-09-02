@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface ActionButton {
-  label: string;
+  label: any;
   variant: 'primary' | 'secondary';
   onClick?: () => void;
   href?: string;

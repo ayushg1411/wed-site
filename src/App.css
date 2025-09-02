@@ -38,10 +38,17 @@
 }
 .app {
   min-height: 100vh;
+  background: #F7FAFC;
 }
 
 .main-content {
   padding-top: 70px; /* Account for fixed header */
+}
+
+/* Remove padding-top for carousel on homepage */
+.main-content > *:first-child .image-carousel {
+  margin-top: -70px;
+  padding-top: 70px;
 }
 
 .hero {
@@ -53,43 +60,18 @@
 
 .hero h1 {
   font-size: 3rem;
-  margin: 0 0 1rem 0;
+  margin-bottom: 1rem;
   font-weight: 700;
 }
 
 .hero p {
   font-size: 1.25rem;
-  margin: 0;
   opacity: 0.9;
-}
-
-.content {
-  max-width: 1200px;
+  max-width: 600px;
   margin: 0 auto;
-  padding: 4rem 2rem;
-}
-
-.content-block {
-  margin-bottom: 3rem;
-}
-
-.content-block h2 {
-  font-size: 2rem;
-  color: #2d3748;
-  margin-bottom: 1rem;
-}
-
-.content-block p {
-  color: #4a5568;
-  line-height: 1.6;
-  font-size: 1.1rem;
 }
 
 @media (max-width: 768px) {
-  .main-content {
-    padding-top: 60px;
-  }
-  
   .hero {
     padding: 4rem 1rem;
   }
@@ -99,10 +81,6 @@
   }
   
   .hero p {
-    font-size: 1.1rem;
-  }
-  
-  .content {
-    padding: 2rem 1rem;
+    font-size: 1rem;
   }
 }

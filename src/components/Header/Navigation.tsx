@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { WEDDING_CATEGORIES } from '../../constants/WeddingCategories';
 
 interface DropdownItem {
   label: string;
@@ -27,19 +28,16 @@ export const Navigation: React.FC<NavigationProps> = ({ items }) => {
     setActiveDropdown(null);
   };
 
-  // Dummy dropdown data
+  // Convert wedding categories to dropdown items
+  const weddingDropdownItems: DropdownItem[] = WEDDING_CATEGORIES.map(category => ({
+    label: category.label,
+    href: category.href,
+    description: `Explore ${category.label.toLowerCase()}`
+  }));
+
   const getDropdownItems = (label: string): DropdownItem[] => {
     const dropdownData: Record<string, DropdownItem[]> = {
-      'Wedding': [
-        { label: 'Save The Date', href: '/wedding/story', description: 'Learn about our journey' },
-        { label: 'Engagement Ceremony', href: '/wedding/team', description: 'Meet our talented team' },
-        { label: 'Haldi Ceremony', href: '/wedding/mission', description: 'Our vision and values' },
-        { label: 'Mehandi Ceremony', href: '/wedding/careers', description: 'Join our growing team' },
-        { label: 'Countdown Card', href: '/wedding/press', description: 'Latest news and updates' },
-        { label: 'Wedding logo', href: '/wedding/contact', description: 'Get in touch with us' },
-         { label: 'Destination Wedding Video', href: '/wedding/contact', description: 'Get in touch with us' },
-          { label: 'Premium Card Video', href: '/wedding/contact', description: 'Get in touch with us' },
-      ],
+      'Wedding': weddingDropdownItems,
       'Features': [
         { label: 'Video Templates', href: '/features/templates', description: 'Beautiful pre-made designs' },
         { label: 'Custom Editing', href: '/features/editing', description: 'Professional video editing' },

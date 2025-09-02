@@ -54,7 +54,7 @@ export const LoginModal: React.FC<LoginModalProps> = ({
             {loading ? 'Signing in...' : 'Continue with Google'}
           </button>
 
-          <div className="login-modal__divider">
+          {/* <div className="login-modal__divider">
             <span>or</span>
           </div>
 
@@ -90,7 +90,7 @@ export const LoginModal: React.FC<LoginModalProps> = ({
 
           <div className="login-modal__footer">
             <p>Don't have an account? <a href="#signup">Sign up</a></p>
-          </div>
+          </div> */}
         </div>
       </div>
     </Modal>

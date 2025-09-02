@@ -7,49 +7,22 @@ import { VideoGrid } from './components/VideoGrid';
 import { OrderPage } from './pages/OrderPage';
 import { AuthProvider } from './contexts/AuthContext';
 import SaveDate from './categories/SaveDate';
-import { CATEGORIES } from './constatnts/Categories';
+import { ImageCarousel } from './components/ImageCarousel/ImageCarousel';
 
-const sampleVideos = [
-  {
-    id: '1',
-    vimeoId: '1107234012',
-    title: 'Getting Started Guide',
-    description: 'Learn how to create your first digital wedding invitation',
-    duration: '3:45',
-    pages: 3,
-    price: '699',
-    category: CATEGORIES.WEDDING
-  },
-  {
-    id: '2',
-    vimeoId: '1107234012',
-    title: 'Advanced Features Overview',
-    description: 'Discover powerful tools to grow your business',
-    duration: '5:20',
-      pages: 3,
-    price: '699',
-    category: CATEGORIES.WEDDING
-  },
-  {
-    id: '3',
-    vimeoId: '1107224531',
-    title: 'Success Stories',
-    description: 'See how other businesses thrive with our platform',
-    duration: '4:15',
-      pages: 3,
-    price: '699',
-    category: CATEGORIES.BUSINESS
-  }
-];
+import { sampleVideos } from './constatnts/VideosData';
+import { carouselImages } from './constants/CarouselData';
 
 function HomePage() {
   return (
     <>
-      <section className="hero">
-        
-        <h1>Welcome to Gathbandhan</h1>
-        <p>Because Every Love Story Deserves a Beautiful Beginning</p>
-      </section>
+      <ImageCarousel 
+        images={carouselImages}
+        autoScrollInterval={5000}
+        showDots={true}
+        showArrows={false}
+      />
+      
+     
       
       <VideoGrid 
         videos={sampleVideos}

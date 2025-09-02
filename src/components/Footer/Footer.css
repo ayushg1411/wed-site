@@ -27,12 +27,12 @@
 .footer__newsletter-title {
   font-size: 1.75rem;
   font-weight: 700;
-  color: #1e293b;
+  color: #000;
   margin: 0 0 0.5rem 0;
 }
 
 .footer__newsletter-subtitle {
-  color: #64748b;
+  color: #000;
   margin: 0;
   font-size: 1rem;
 }
@@ -79,7 +79,7 @@
 .footer__privacy {
   margin-top: 1rem;
   font-size: 0.875rem;
-  color: #64748b;
+  color: #F6F6F6;
 }
 
 .footer__privacy-link {
@@ -89,7 +89,7 @@
 
 /* Main Footer */
 .footer__main {
-  background: white;
+  background: #000000;
   padding: 3rem 0 1rem;
 }
 
@@ -109,12 +109,12 @@
 .footer__section-title {
   font-size: 1.125rem;
   font-weight: 600;
-  color: #1e293b;
+  color: #fff;
   margin: 0 0 1rem 0;
 }
 
 .footer__section-text {
-  color: #64748b;
+  color: #F6F6F6;
   line-height: 1.6;
   margin: 0 0 1.5rem 0;
 }
@@ -157,7 +157,7 @@
 }
 
 .footer__link {
-  color: #64748b;
+  color: #F6F6F6;
   text-decoration: none;
   transition: color 0.2s ease;
 }
@@ -167,13 +167,13 @@
 }
 
 .footer__bottom {
-  border-top: 1px solid #e2e8f0;
+  /* border-top: 1px solid #e2e8f0; */
   padding-top: 2rem;
   text-align: center;
 }
 
 .footer__copyright {
-  color: #64748b;
+  color: #F6F6F6;
   font-size: 0.875rem;
   margin: 0;
 }
