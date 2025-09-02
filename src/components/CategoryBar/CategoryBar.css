@@ -8,6 +8,12 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
+@media (max-width: 768px) {
+  .category-bar {
+  top: 60px
+  }
+
+}
 .category-bar__container {
   max-width: 1200px;
   margin: 0 auto;
