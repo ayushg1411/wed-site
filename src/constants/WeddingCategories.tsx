@@ -5,9 +5,44 @@ export const WEDDING_CATEGORIES = [
     href: '/wedding/wedding-invites'
   },
   {
-    id: 'love-lap-invites',
-    label: 'LoveLap Invites',
-    href: '/wedding/love-lap-invites'
+    id: 'save-the-date',
+    label: 'Save The Date',
+    href: '/wedding/save-the-date'
+  },
+  {
+    id: 'engagement-ceremony',
+    label: 'Engagement Ceremony',
+    href: '/wedding/engagement-ceremony'
+  },
+  {
+    id: 'haldi-ceremony',
+    label: 'Haldi Ceremony',
+    href: '/wedding/haldi-ceremony'
+  },
+  {
+    id: 'mehndi-ceremony',
+    label: 'Mehndi Ceremony',
+    href: '/wedding/mehndi-ceremony'
+  },
+  {
+    id: 'sangeet-ceremony',
+    label: 'Sangeet Ceremony',
+    href: '/wedding/sangeet-ceremony'
+  },
+  {
+    id: 'hindu-wedding-cards',
+    label: 'Hindu Wedding Cards',
+    href: '/wedding/hindu-wedding-cards'
+  },
+  {
+    id: 'muslim-wedding-cards',
+    label: 'Muslim Wedding Cards',
+    href: '/wedding/muslim-wedding-cards'
+  },
+  {
+    id: 'anniversary-cards',
+    label: 'Anniversary Cards',
+    href: '/wedding/anniversary-cards'
   },
   {
     id: 'caricature-invites',
@@ -15,33 +50,8 @@ export const WEDDING_CATEGORIES = [
     href: '/wedding/caricature-invites'
   },
   {
-    id: 'gifts-for-her',
-    label: 'Gifts for Her',
-    href: '/wedding/gifts-for-her'
-  },
-  {
-    id: 'muslim-invites',
-    label: 'Muslim Invites',
-    href: '/wedding/muslim-invites'
-  },
-  {
-    id: 'hair-clips',
-    label: 'Hair Clips',
-    href: '/wedding/hair-clips'
-  },
-  {
-    id: 'premium-necklace',
-    label: 'Premium Necklace',
-    href: '/wedding/premium-necklace'
-  },
-  {
-    id: 'engagement-invites',
-    label: 'Engagement Invites',
-    href: '/wedding/engagement-invites'
-  },
-  {
-    id: 'birthday-invites',
-    label: 'Birthday Invites',
-    href: '/wedding/birthday-invites'
+    id: 'birthday-cards',
+    label: 'Birthday Cards',
+    href: '/wedding/birthday-cards'
   }
 ];

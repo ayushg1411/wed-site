@@ -6,6 +6,17 @@ export interface Video {
   duration?: string;
   price:string;
   pages:number;
+  originalPrice:string;
+  category:string;
+  tier: {
+    id: string;
+    label: string;
+    color: string;
+    bgColor: string;
+    icon: string;
+    description: string;
+  };
+  code: string;
 }
 
 export interface VideoGridProps {
