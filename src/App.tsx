@@ -107,26 +107,26 @@ function HomePage() {
                 <div className="feature-item">
                   <div className="feature-icon">
                     <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M13 12h7v1.5h-7m0-2.5h7V9h-7m0-2.5h7V5h-7M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18-.21 0-.41-.06-.57-.18l-7.9-4.44A.991.991 0 0 1 3 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18.21 0 .41.06.57.18l7.9 4.44c.32.17.53.5.53.88v9z"/>
+                    </svg>
+                  </div>
+                  <span>Instant Delivery</span>
+                </div>
+                <div className="feature-item">
+                  <div className="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
                       <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                     </svg>
                   </div>
-                  <span>Custom Templates</span>
+                  <span>100+ Designs</span>
                 </div>
                 <div className="feature-item">
                   <div className="feature-icon">
                     <svg viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
+                      <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/>
                     </svg>
                   </div>
-                  <span>Easy Editing</span>
-                </div>
-                <div className="feature-item">
-                  <div className="feature-icon">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"/>
-                    </svg>
-                  </div>
-                  <span>Instant Sharing</span>
+                  <span>Multi Category</span>
                 </div>
                 <div className="feature-item">
                   <div className="feature-icon">
@@ -134,7 +134,7 @@ function HomePage() {
                       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                     </svg>
                   </div>
-                  <span>Capture Your Style</span>
+                  <span>Best Quality</span>
                 </div>
               </div>
 
