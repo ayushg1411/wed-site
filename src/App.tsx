@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import { Header } from './components/Header/Header';
@@ -8,26 +8,225 @@ import { OrderPage } from './pages/OrderPage';
 import { AuthProvider } from './contexts/AuthContext';
 import SaveDate from './categories/SaveDate';
 import { ImageCarousel } from './components/ImageCarousel/ImageCarousel';
+import { ContactUs } from './pages/ContactUs';
 
 import { sampleVideos } from './constatnts/VideosData';
 import { carouselImages } from './constants/CarouselData';
+import { Reviews } from './pages/Reviews';
 
 function HomePage() {
+
+  const [email, setEmail] = useState('');
+
+  const handleSubscribe = async (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle subscription logic here
+    console.log('Subscribing email:', email);
+    try {
+      const urlEncodedBody = new URLSearchParams({
+        mobile: email
+
+      }).toString();
+      setEmail('');
+      const url =
+        'https://script.google.com/macros/s/AKfycbzEbmdBfdRQiHn2WGsKiLFIMR8g7bEV2ipWg4SHT9aDl7vCCo5NJSuUN4OARMK1nwj4/exec'
+
+      const response = await fetch(url, {
+        method: 'POST',
+        body: urlEncodedBody,
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+      });
+
+      if (response.ok) {
+
+        setEmail(
+          ''
+        );
+      } else {
+        throw new Error('Failed to submit form');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+
+    } finally {
+      setEmail('');
+    }
+
+  };
   return (
     <>
-      <ImageCarousel 
+     
+
+      {/* Main Hero Section */}
+      <section className="main-hero">
+        <div className="main-hero__container">
+          <div className="main-hero__content">
+            <div className="main-hero__text">
+              <h1 className="main-hero__title ">
+            <span className='main-hero__title--first'>Forever Starts Today</span>    
+                <span className="main-hero__title-highlight">Get Your Dream Invite</span>
+              </h1>
+                  <div className="main-hero__visual--phone">
+              <div className="hero-card hero-card--main">
+                <img 
+                  src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                  alt="Beautiful wedding invitation design"
+                />
+                <div className="hero-card__overlay">
+                  <div className="play-button">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M8 5v14l11-7z"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="hero-card hero-card--floating hero-card--1">
+                <img 
+                  src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                  alt="Wedding couple"
+                />
+              </div>
+              
+              <div className="hero-card hero-card--floating hero-card--2">
+                <img 
+                  src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                  alt="Wedding rings"
+                />
+              </div>
+            </div>
+              <p className="main-hero__description">
+                Skip traditional invites and bring your "Save the Date" to life with a personalized 
+                wedding invitation video designed just for you. Add your photos, clips, text, and 
+                music—share your love story in a way that's as unique as your celebration.
+              </p>
+
+              <div className="main-hero__features">
+                <div className="feature-item">
+                  <div className="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                  </div>
+                  <span>Custom Templates</span>
+                </div>
+                <div className="feature-item">
+                  <div className="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
+                    </svg>
+                  </div>
+                  <span>Easy Editing</span>
+                </div>
+                <div className="feature-item">
+                  <div className="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"/>
+                    </svg>
+                  </div>
+                  <span>Instant Sharing</span>
+                </div>
+                <div className="feature-item">
+                  <div className="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                  </div>
+                  <span>Capture Your Style</span>
+                </div>
+              </div>
+
+              {/* <div className="main-hero__actions">
+                <button className="btn btn--primary">Start Designing</button>
+                <button className="btn btn--secondary">See Templates</button>
+              </div> */}
+            </div>
+
+            <div className="main-hero__visual">
+              <div className="hero-card hero-card--main">
+                <img 
+                  src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                  alt="Beautiful wedding invitation design"
+                />
+                <div className="hero-card__overlay">
+                  <div className="play-button">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M8 5v14l11-7z"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="hero-card hero-card--floating hero-card--1">
+                <img 
+                  src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                  alt="Wedding couple"
+                />
+              </div>
+              
+              <div className="hero-card hero-card--floating hero-card--2">
+                <img 
+                  src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                  alt="Wedding rings"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+       <ImageCarousel
         images={carouselImages}
         autoScrollInterval={5000}
         showDots={true}
         showArrows={false}
       />
-      
-     
-      
-      <VideoGrid 
+
+      <VideoGrid
         videos={sampleVideos}
         title="Digital Wedding Invitations"
       />
+      <div className="footer__newsletter">
+        <div className="footer__newsletter-container">
+          <div className="footer__newsletter-left">
+            <div className="footer__newsletter-content">
+              <h2 className="footer__newsletter-title">Get in Touch</h2>
+              <p className="footer__newsletter-subtitle">contact us for the best wedding invitations video</p>
+            </div>
+
+            <form className="footer__newsletter-form" onSubmit={handleSubscribe}>
+              <input
+                type="text"
+                placeholder="Enter your number"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="footer__newsletter-input"
+                required
+              />
+              <button type="submit" className="footer__newsletter-button">
+                Subscribe
+              </button>
+            </form>
+
+            <p className="footer__newsletter-note">
+              We'll contact you within 24 hours to discuss your perfect wedding invitation design.
+            </p>
+          </div>
+
+          <div className="footer__newsletter-right">
+            <div className="footer__newsletter-image">
+              <img
+                src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Wedding invitation design"
+                className="newsletter-image"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
     </>
   );
 }
@@ -38,15 +237,17 @@ function App() {
       <Router>
         <div className="app">
           <Header />
-          
+
           <main className="main-content">
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/order/:videoId" element={<OrderPage />} />
-               <Route path="/wedding/:category" element={<SaveDate />} />
+              <Route path="/wedding/:category" element={<SaveDate />} />
+              <Route path="/contact" element={<ContactUs />} />
+                <Route path="/reviews" element={<Reviews />} />
             </Routes>
           </main>
-          
+
           <Footer />
         </div>
       </Router>

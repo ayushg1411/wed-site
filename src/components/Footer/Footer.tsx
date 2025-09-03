@@ -2,73 +2,12 @@ import React, { useState } from 'react';
 import './Footer.css';
 
 export const Footer: React.FC = () => {
-  const [email, setEmail] = useState('');
 
-  const handleSubscribe = async (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle subscription logic here
-    console.log('Subscribing email:', email);
-    try {
-      const urlEncodedBody = new URLSearchParams({
-       mobile : email
-      }).toString();
-      setEmail('');
-      const url =
-        'https://script.google.com/macros/s/AKfycbzb_rv4ebhWQHasN0kAH9Mnx9kY-Fcr8Z1js0lrc6Y3fBIMu7Wk2x0Xm_b3CCtxUV4J/exec';
-
-      const response = await fetch(url, {
-        method: 'POST',
-        body: urlEncodedBody,
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-      });
-
-      if (response.ok) {
-       
-        setEmail(
-        ''
-        );
-      } else {
-        throw new Error('Failed to submit form');
-      }
-    } catch (error) {
-      console.error('Error submitting form:', error);
-     
-    } finally {
-      setEmail('');
-    }
-    
-  };
 
 
   return (
     <footer className="footer">
       {/* Newsletter Section */}
-      <div className="footer__newsletter">
-        <div className="footer__newsletter-container">
-          <div className="footer__newsletter-content">
-            <h2 className="footer__newsletter-title">Get in Touch</h2>
-            <p className="footer__newsletter-subtitle">contact us for the best wedding invitations video</p>
-          </div>
-          
-          <form className="footer__newsletter-form" onSubmit={handleSubscribe}>
-            <input
-              type="text"
-              placeholder="Enter your number"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="footer__newsletter-input"
-              required
-            />
-            <button type="submit" className="footer__newsletter-button">
-              Subscribe
-            </button>
-          </form>
-        </div>
-        
-       
-      </div>
 
       {/* Main Footer */}
       <div className="footer__main">
@@ -108,9 +47,10 @@ export const Footer: React.FC = () => {
             <div className="footer__section">
               <h4 className="footer__section-title">Quick Links</h4>
               <ul className="footer__links">
-                <li><a href="/features" className="footer__link">Features</a></li>
+                {/* <li><a href="/features" className="footer__link">Features</a></li> */}
                 <li><a href="/pricing" className="footer__link">Pricing</a></li>
-                <li><a href="/templates" className="footer__link">Templates</a></li>
+                <li><a href="/reviews" className="footer__link">Reviews</a></li>
+                {/* <li><a href="/templates" className="footer__link">Templates</a></li> */}
               </ul>
             </div>
 
