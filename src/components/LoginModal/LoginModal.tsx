@@ -29,8 +29,8 @@ export const LoginModal: React.FC<LoginModalProps> = ({
     <Modal isOpen={isOpen} onClose={onClose} className="login-modal">
       <div className="login-modal__content">
         <div className="login-modal__header">
-          <h2>Welcome back</h2>
-          <p>Sign in to your account to continue</p>
+          <h2>Join Our Wedding Family! 💕</h2>
+          <p>Sign in to create magical moments and beautiful memories together</p>
         </div>
 
         <div className="login-modal__body">
