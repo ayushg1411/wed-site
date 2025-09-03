@@ -391,8 +391,9 @@
   }
   
   .navigation__link {
-    font-size: 0.9rem;
+    font-size: 1.3em;
     padding: 0.5rem 0.75rem;
+    font-weight: 700;
   }
 
   .navigation__item--active .navigation__link {
