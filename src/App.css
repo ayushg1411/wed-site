@@ -323,7 +323,7 @@
 
 @media (max-width: 768px) {
   .main-hero {
-    padding: 4rem 0;
+    padding: 0rem 0;
   }
   
   .main-hero__title {
