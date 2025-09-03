@@ -440,7 +440,7 @@
 .original-total {
   text-decoration: line-through;
   color: #64748b;
-  margin-right: 0.5rem;
+  margin-right: 0.1rem;
 }
 
 .current-price,

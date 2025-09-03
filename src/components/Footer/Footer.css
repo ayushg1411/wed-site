@@ -34,12 +34,12 @@
 .footer__newsletter-title {
   font-size: 1.75rem;
   font-weight: 700;
-  color: #000;
+  color: #fff;
   margin: 0 0 0.5rem 0;
 }
 
 .footer__newsletter-subtitle {
-  color: #000;
+  color: #fff;
   margin: 0;
   font-size: 1rem;
 }
@@ -54,13 +54,13 @@
 .footer__newsletter-input {
   flex: 1;
   padding: 1rem 1.25rem;
-  border: 2px solid #e2e8f0;
   border-radius: 12px;
   font-size: 1rem;
   background: white;
   transition: all 0.3s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   font-weight: 500;
+  border: none
 }
 
 .footer__newsletter-input:focus {
@@ -91,6 +91,36 @@
   overflow: hidden;
 }
 
+
+
+.footer__newsletter {
+  position: relative;
+  background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.footer__newsletter::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(79, 70, 229, 0.8) 0%,
+    rgba(99, 102, 241, 0.6) 50%,
+    rgba(139, 92, 246, 0.8) 100%
+  );
+  z-index: 1;
+}
+
+.footer__newsletter-container {
+  position: relative;
+  z-index: 2;
+}
 .footer__newsletter-button::before {
   content: '';
   position: absolute;
@@ -118,7 +148,7 @@
 }
 
 .footer__newsletter-note {
-  color: #64748b;
+  color: #F6F6F6;
   font-size: 0.9rem;
   line-height: 1.5;
   margin: 0;
@@ -128,14 +158,14 @@
 .footer__newsletter-right {
   flex: 1;
   display: flex;
-  justify-content: center;
+  justify-content: right;
   align-items: center;
 }
 
 .footer__newsletter-image {
   width: 100%;
-  max-width: 350px;
-  height: 220px;
+  max-width: 400px;
+  height: 260px;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);

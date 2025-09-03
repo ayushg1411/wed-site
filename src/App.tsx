@@ -218,7 +218,7 @@ function HomePage() {
           <div className="footer__newsletter-right">
             <div className="footer__newsletter-image">
               <img
-                src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80" 
                 alt="Wedding invitation design"
                 className="newsletter-image"
               />
