@@ -13,7 +13,7 @@ import { ContactUs } from './pages/ContactUs';
 import { sampleVideos } from './constatnts/VideosData';
 import { carouselImages } from './constants/CarouselData';
 import { Reviews } from './pages/Reviews';
-
+import WhatsappButton from './components/Footer/WhatsappButton';
 function HomePage() {
 
   const [email, setEmail] = useState('');
@@ -183,7 +183,7 @@ function HomePage() {
         showDots={true}
         showArrows={false}
       />
-
+ <WhatsappButton phoneNumber='7017835443'/>
       <VideoGrid
         videos={sampleVideos}
         title="Digital Wedding Invitations"
