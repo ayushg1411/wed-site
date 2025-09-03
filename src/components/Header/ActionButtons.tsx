@@ -2,7 +2,7 @@ import React from 'react';
 
 interface ActionButton {
   label: any;
-  variant: 'primary' | 'secondary';
+  variant: 'primary' | 'secondary' | 'profile';
   onClick?: () => void;
   href?: string;
 }
@@ -34,7 +34,7 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ buttons }) => {
             key={index}
             onClick={button.onClick}
             className={className}
-            style={{fontWeight:700}}
+            style={button.variant !== 'profile' ? {fontWeight: 700} : {}}
           >
             {button.label}
           </button>

@@ -17,7 +17,8 @@ export const Header: React.FC<HeaderProps> = ({
 }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
-  const { user, signOut } = useAuth();
+  const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
+  const { user, signOut, loading } = useAuth();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,50 +37,58 @@ export const Header: React.FC<HeaderProps> = ({
   const handleSignOut = async () => {
     try {
       await signOut();
+      setIsProfileMenuOpen(false);
     } catch (error) {
       console.error('Error signing out:', error);
     }
   };
 
-  function getFirstAndSecondName(nameString:any): string {
-  if (!nameString) return 'U'
-  
-  const parts = nameString.split(' ');
-  const str:string = parts[0].charAt(0).toUpperCase() + parts[1].charAt(0).toUpperCase()
+  const handleProfileClick = () => {
+    setIsProfileMenuOpen(!isProfileMenuOpen);
+  };
+
+  function getFirstAndSecondName(nameString: any): string {
+    if (!nameString) return 'U'
     
-  return str
-}
+    const parts = nameString.split(' ');
+    const str: string = parts[0].charAt(0).toUpperCase() + (parts[1] ? parts[1].charAt(0).toUpperCase() : '')
+      
+    return str
+  }
 
-
-
-
-  const actionButtons = user
+  // Show loading state or user/login buttons
+  const actionButtons = loading 
     ? [
         { 
-          label: getFirstAndSecondName(user.user_metadata?.full_name ),
-          variant: 'secondary' as const,
-          onClick: () => {} 
-        },
+          label: <div className="profile-avatar profile-avatar--loading">
+            <div className="loading-spinner"></div>
+          </div>,
+          variant: 'profile' as const,
+          onClick: () => {} // No action while loading
+        }
+      ]
+    : user
+    ? [
         { 
-          label:  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" 
-     viewBox="0 0 24 24" fill="none" stroke="currentColor" 
-     stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
-   >
-  <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
-  <polyline points="16 17 21 12 16 7"/>
-  <line x1="21" y1="12" x2="9" y2="12"/>
-</svg>,
-          variant: 'primary' as const,
-          onClick: handleSignOut 
+          label: <div className="profile-avatar">
+            {getFirstAndSecondName(user.user_metadata?.full_name)}
+          </div>,
+          variant: 'profile' as const,
+          onClick: handleProfileClick 
         }
       ]
     : [
         { 
-          label: 'Login', 
-          variant: 'primary' as const,
+          label:<div className="profile-avatar profile-avatar--loading">
+           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="7" r="4" />
+  <path d="M5.5 21a7.5 7.5 0 0 1 13 0" />
+</svg>
+
+          </div>,
+          variant: 'profile' as const,
           onClick: handleLoginClick 
-        },
-        
+        }
       ];
 
   return (
@@ -88,7 +97,42 @@ export const Header: React.FC<HeaderProps> = ({
         <div className="header__container">
           <Logo {...logo} />
           <Navigation items={navigationItems} />
-          <ActionButtons buttons={actionButtons} />
+          <div className="header__actions-wrapper">
+            <ActionButtons buttons={actionButtons} />
+            
+            {/* Profile Dropdown */}
+            {user && isProfileMenuOpen && !loading && (
+              <div className="profile-dropdown">
+                <div className="profile-dropdown__content">
+                  <div className="profile-dropdown__header">
+                    <div className="profile-dropdown__avatar">
+                      {getFirstAndSecondName(user.user_metadata?.full_name)}
+                    </div>
+                    <div className="profile-dropdown__info">
+                      <span className="profile-dropdown__name">
+                        {user.user_metadata?.full_name || 'User'}
+                      </span>
+                      <span className="profile-dropdown__email">
+                        {user.email}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="profile-dropdown__divider"></div>
+                  <button 
+                    className="profile-dropdown__logout"
+                    onClick={handleSignOut}
+                  >
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+                      <polyline points="16 17 21 12 16 7"/>
+                      <line x1="21" y1="12" x2="9" y2="12"/>
+                    </svg>
+                    Sign Out
+                  </button>
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       </header>
 
