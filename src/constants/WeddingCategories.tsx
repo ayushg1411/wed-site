@@ -2,56 +2,56 @@ export const WEDDING_CATEGORIES = [
   {
     id: 'wedding-invites',
     label: 'Wedding Invites',
-    href: '/wedding/wedding-invites'
+    href: '/category/wedding-invites'
   },
   {
     id: 'save-the-date',
     label: 'Save The Date',
-    href: '/wedding/save-the-date'
+    href: '/category/save-the-date'
   },
   {
     id: 'engagement-ceremony',
     label: 'Engagement Ceremony',
-    href: '/wedding/engagement-ceremony'
+    href: '/category/engagement-ceremony'
   },
   {
     id: 'haldi-ceremony',
     label: 'Haldi Ceremony',
-    href: '/wedding/haldi-ceremony'
+    href: '/category/haldi-ceremony'
   },
   {
     id: 'mehndi-ceremony',
     label: 'Mehndi Ceremony',
-    href: '/wedding/mehndi-ceremony'
+    href: '/category/mehndi-ceremony'
   },
   {
     id: 'sangeet-ceremony',
     label: 'Sangeet Ceremony',
-    href: '/wedding/sangeet-ceremony'
+    href: '/category/sangeet-ceremony'
   },
   {
     id: 'hindu-wedding-cards',
     label: 'Hindu Wedding Cards',
-    href: '/wedding/hindu-wedding-cards'
+    href: '/category/hindu-wedding-cards'
   },
   {
     id: 'muslim-wedding-cards',
     label: 'Muslim Wedding Cards',
-    href: '/wedding/muslim-wedding-cards'
+    href: '/category/muslim-wedding-cards'
   },
   {
     id: 'anniversary-cards',
     label: 'Anniversary Cards',
-    href: '/wedding/anniversary-cards'
+    href: '/category/anniversary-cards'
   },
   {
     id: 'caricature-invites',
     label: 'Caricature Invites',
-    href: '/wedding/caricature-invites'
+    href: '/category/caricature-invites'
   },
   {
     id: 'birthday-cards',
     label: 'Birthday Cards',
-    href: '/wedding/birthday-cards'
+    href: '/category/birthday-cards'
   }
 ];

@@ -6,7 +6,7 @@ import { Footer } from './components/Footer';
 import { VideoGrid } from './components/VideoGrid';
 import { OrderPage } from './pages/OrderPage';
 import { AuthProvider } from './contexts/AuthContext';
-import SaveDate from './categories/SaveDate';
+import CategoryComponent from './categories/CategoryComponent';
 import { ImageCarousel } from './components/ImageCarousel/ImageCarousel';
 import { ContactUs } from './pages/ContactUs';
 
@@ -242,7 +242,7 @@ function App() {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/order/:videoId" element={<OrderPage />} />
-              <Route path="/wedding/:category" element={<SaveDate />} />
+              <Route path="/category/:category" element={<CategoryComponent />} />
               <Route path="/contact" element={<ContactUs />} />
                 <Route path="/reviews" element={<Reviews />} />
             </Routes>

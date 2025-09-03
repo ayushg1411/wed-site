@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { sampleVideos } from "../constatnts/VideosData";
 import { WEDDING_CATEGORIES } from "../constants/WeddingCategories";
 
-const SaveDate = () => {
+const CategoryComponent = () => {
     const {category} = useParams<{ category: string }>();
     
     const filteredVideos = sampleVideos.filter((item)=>{
@@ -36,4 +36,4 @@ const SaveDate = () => {
     );
 };
 
-export default SaveDate;
+export default CategoryComponent;
