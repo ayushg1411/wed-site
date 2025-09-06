@@ -3,7 +3,7 @@ import { CATEGORIES, VIDEO_TIERS } from './Categories';
 export const sampleVideos = [
   {
     id: '1',
-    vimeoId: '1107234012',
+    vimeoId: '1116372305',
     title: 'Radha Krishna Wedding Invitation Video',
     description: 'Learn how to create your first digital wedding invitation',
     duration: '1:45',
