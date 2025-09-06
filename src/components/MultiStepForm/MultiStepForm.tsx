@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Step1SubmissionMethod } from './steps/Step1SubmissionMethod';
 import { Step2BrideGroomSide } from './steps/Step2BrideGroomSide'
 import { Step3BrideDetails } from './steps/Step3BrideDetails';
@@ -31,10 +32,13 @@ interface Video {
 }
 
 export const MultiStepForm: React.FC<MultiStepFormProps> = ({ videoId, video,  videoTitle }) => {
+  const navigate = useNavigate();
   const [currentStep, setCurrentStep] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+  const [showResultModal, setShowResultModal] = useState(false);
+  const [resultMessage, setResultMessage] = useState('');
   const { user } = useAuth();
   
   const [formData, setFormData] = useState<FormData>({
@@ -167,36 +171,41 @@ export const MultiStepForm: React.FC<MultiStepFormProps> = ({ videoId, video,  v
     setSubmitStatus('idle');
 
     try {
-      // Prepare order data
       const orderData = {
         ...formData,
         videoId,
         videoTitle
       };
 
-
-      // Submit order to database
       const orderResult = await submitOrder(orderData, user?.id);
       
       if (!orderResult.success) {
-        throw new Error( 'Failed to submit order');
+        throw new Error('Failed to submit order');
       }
 
       const orderId = orderResult.data.id;
       console.log('Order created with ID:', orderId);
 
       setSubmitStatus('success');
+      setResultMessage(`Order submitted successfully! Order ID: ${orderId.slice(0, 8)}\n\nThank you for your order. We'll contact you soon at ${formData.customerInfo.mobile}.`);
+      setShowResultModal(true);
       
-      // Show success message
-      alert(`Order submitted successfully! Order ID: ${orderId}\n\nThank you for your order. We'll contact you soon at ${formData.customerInfo.mobile}.`);
-      
-      // Log formatted data for debugging
-
+      // Auto close and redirect after 3 seconds
+      setTimeout(() => {
+        setShowResultModal(false);
+        navigate('/');
+      }, 5000);
 
     } catch (error) {
       console.error('Order submission failed:', error);
       setSubmitStatus('error');
-      alert(`Failed to submit order: ${error instanceof Error ? error.message : 'Unknown error'}\n\nPlease try again or contact support.`);
+      setResultMessage(`Failed to submit order: ${error instanceof Error ? error.message : 'Unknown error'}\n\nPlease try again or contact support.`);
+      setShowResultModal(true);
+      
+      // Auto close after 3 seconds
+      setTimeout(() => {
+        setShowResultModal(false);
+      }, 3000);
     } finally {
       setIsSubmitting(false);
     }
@@ -281,6 +290,32 @@ export const MultiStepForm: React.FC<MultiStepFormProps> = ({ videoId, video,  v
         isOpen={isLoginModalOpen}
         onClose={handleLoginModalClose}
       />
+
+      {/* Result Modal */}
+      {showResultModal && (
+        <div className="result-modal-overlay">
+          <div className="result-modal">
+            <div className={`result-modal__icon ${submitStatus === 'success' ? 'success' : 'error'}`}>
+              {submitStatus === 'success' ? (
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+              ) : (
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                </svg>
+              )}
+            </div>
+            <h3 className="result-modal__title">
+              {submitStatus === 'success' ? 'Order Submitted!' : 'Submission Failed'}
+            </h3>
+            <p className="result-modal__message">{resultMessage}</p>
+            <div className="result-modal__progress">
+              <div className="progress-circle"></div>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 };

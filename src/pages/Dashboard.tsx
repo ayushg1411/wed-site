@@ -169,7 +169,7 @@ export const Dashboard: React.FC = () => {
                   <div className="order-card__details">
                     <p><strong>Customer:</strong> {order.customer_name}</p>
                     <p><strong>Mobile:</strong> {order.customer_mobile}</p>
-                    <p><strong>Date:</strong> {new Date(order.created_at).toLocaleDateString()}</p>
+                    <p><strong>Date:</strong> {new Date(order.created_at).toLocaleString('en-US', { hour12: true })}</p>
                     <p><strong>Total:</strong> ₹{order.pricing?.total || 'N/A'}</p>
                   </div>
 
@@ -204,7 +204,7 @@ export const Dashboard: React.FC = () => {
                     </span>
                   </div>
                   <div><strong>Video:</strong> {selectedOrder.video_title}</div>
-                  <div><strong>Created:</strong> {new Date(selectedOrder.created_at).toLocaleString()}</div>
+                  <div><strong>Created:</strong> {new Date(selectedOrder.created_at).toLocaleString('en-US', { hour12: true })}</div>
                 </div>
 
                 {/* Customer Information */}
@@ -263,7 +263,7 @@ export const Dashboard: React.FC = () => {
                     <div className="order-detail-grid">
                       <div><strong>Event:</strong> {selectedOrder.wedding_details.eventName}</div>
                       <div><strong>Venue:</strong> {selectedOrder.wedding_details.venue}</div>
-                      <div><strong>Date & Time:</strong> {selectedOrder.wedding_details.dateTime}</div>
+                      <div><strong>Date & Time:</strong> {new Date(selectedOrder.wedding_details.dateTime).toLocaleString('en-US', { hour12: true })}</div>
                     </div>
                   </div>
                 )}
@@ -295,9 +295,9 @@ export const Dashboard: React.FC = () => {
                     <h3>Additional Events</h3>
                     {selectedOrder.additional_events.map((event: any, index: number) => (
                       <div key={index} className="order-detail-grid" style={{ marginBottom: '1rem' }}>
-                        <div><strong>Event:</strong> {event.eventName}</div>
+                        <div><strong>Event:</strong> {event.name}</div>
                         <div><strong>Venue:</strong> {event.venue}</div>
-                        <div><strong>Date & Time:</strong> {event.dateTime}</div>
+                        <div><strong>Date & Time:</strong> {new Date(event.dateTime).toLocaleString('en-US', { hour12: true })}</div>
                       </div>
                     ))}
                   </div>
