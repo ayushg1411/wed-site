@@ -30,6 +30,11 @@ interface Video {
 export const MultiStepForm: React.FC<MultiStepFormProps> = ({ videoId, video,  videoTitle }) => {
   const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState<FormData>({
+    customerInfo: {
+      name: '',
+      mobile: '',
+      city: ''
+    },
     submissionMethod: 'website',
     side: 'bride',
     brideDetails: {
@@ -123,6 +128,28 @@ export const MultiStepForm: React.FC<MultiStepFormProps> = ({ videoId, video,  v
     }
   };
 
+  const handleSubmit = () => {
+    console.log('Form submitted with data:', formData);
+    
+    // You can also format it nicely for better readability
+    console.log('=== WEDDING INVITATION ORDER DETAILS ===');
+    console.log('Submission Method:', formData.submissionMethod);
+    console.log('Side:', formData.side);
+    console.log('Bride Details:', formData.brideDetails);
+    console.log('Groom Details:', formData.groomDetails);
+    console.log('Wedding Details:', formData.weddingDetails);
+    console.log('RSVP Details:', formData.rsvpDetails);
+    console.log('Caricature:', formData.caricature);
+    console.log('Additional Events:', formData.additionalEvents);
+    console.log('Comments:', formData.comments);
+    console.log('Photos:', formData.photos);
+    console.log('Topups:', formData.topups);
+    console.log('Pricing:', formData.pricing);
+    console.log('Video ID:', videoId);
+    console.log('Video Title:', videoTitle);
+    console.log('==========================================');
+  };
+
   return (
     <div className="multi-step-form">
       <div className="multi-step-form__header">
@@ -171,6 +198,7 @@ export const MultiStepForm: React.FC<MultiStepFormProps> = ({ videoId, video,  v
         ) : (
           <button 
             type="submit"
+            onClick={handleSubmit}
             className="btn btn--primary btn--submit"
           >
             Submit Order

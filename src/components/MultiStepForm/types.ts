@@ -50,7 +50,14 @@ export interface Pricing {
   total: number;
 }
 
+export interface CustomerInfo {
+  name: string;
+  mobile: string;
+  city: string;
+}
+
 export interface FormData {
+  customerInfo: CustomerInfo;
   submissionMethod: 'upload' | 'website';
   side: 'bride' | 'groom';
   brideDetails: BrideGroomDetails;

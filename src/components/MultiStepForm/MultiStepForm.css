@@ -246,8 +246,8 @@
 
 /* Price Display */
 .price-display {
-  text-align: center;
-  margin: 1rem 0;
+  text-align: right;
+  margin: 0.5rem 0;
   font-size: 1.2rem;
   color: #059669;
 }
@@ -426,7 +426,7 @@
 .product-price {
   padding: 0.75rem 0;
   border-top: 1px solid #e2e8f0;
-  border-bottom: 1px solid #e2e8f0;
+  /* border-bottom: 1px solid #e2e8f0; */
 }
 
 .total-price {
@@ -446,6 +446,107 @@
 .current-total {
   color: #059669;
   font-weight: 600;
+}
+
+/* Customer Info and Submission Method Styles */
+
+
+.submission-method-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+.required {
+  color: #ef4444;
+  font-weight: bold;
+}
+
+.submission-methods {
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.submission-option {
+  padding: 1.5rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #ffffff;
+}
+
+.submission-option:hover {
+  border-color: #d1d5db;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.submission-option.selected {
+  border-color: #4f46e5;
+  background: #f8faff;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.submission-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.submission-icon {
+  font-size: 2rem;
+  min-width: 60px;
+  text-align: center;
+}
+
+.submission-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.submission-title {
+  font-weight: 600;
+  color: #374151;
+  font-size: 1rem;
+}
+
+.submission-desc {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.submission-option input[type="radio"] {
+  margin-left: auto;
+  margin-right: 0;
+  transform: scale(1.2);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .submission-content {
+    gap: 0.75rem;
+  }
+  
+  .submission-icon {
+    font-size: 1.5rem;
+    min-width: 50px;
+  }
+  
+  .submission-title {
+    font-size: 0.95rem;
+  }
+  
+  .submission-desc {
+    font-size: 0.85rem;
+  }
 }
 
 /* Mobile Responsive */

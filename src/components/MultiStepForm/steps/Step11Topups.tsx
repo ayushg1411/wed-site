@@ -3,7 +3,7 @@ import { StepProps } from '../types';
 
 export const Step11Topups: React.FC<StepProps> = ({ formData, updateFormData }) => {
   const handleLogoRemovalChange = (remove: boolean) => {
-    const logoRemovalPrice = remove ? 249 : 0;
+    const logoRemovalPrice = remove ? 50 : 0;
     updateFormData({
       topups: {
         ...formData.topups,
@@ -21,7 +21,7 @@ export const Step11Topups: React.FC<StepProps> = ({ formData, updateFormData }) 
   };
 
   const handleBackgroundMusicChange = (add: boolean) => {
-    const backgroundMusicPrice = add ? 199 : 0;
+    const backgroundMusicPrice = add ? 100 : 0;
     updateFormData({
       topups: {
         ...formData.topups,
@@ -42,13 +42,13 @@ export const Step11Topups: React.FC<StepProps> = ({ formData, updateFormData }) 
     <div className="step-content">
       <h4 className="step-title">Invite Top-ups</h4>
       <p className="step-description">
-        Customize extras like duplicate invites or background music here.
+        Customize extras like remove logo or background music here.
       </p>
 
       {/* Logo Removal */}
       <div className="form-group">
-        <label className="form-label">Invitekaro Logo Removal</label>
-        <p className="form-help">Check the Sample of how the logo looks here</p>
+        <label className="form-label">Gathbandhan Logo Removal</label>
+       
         
         <div className="topup-section">
           <span className="topup-title">Remove Logo</span>
@@ -65,7 +65,7 @@ export const Step11Topups: React.FC<StepProps> = ({ formData, updateFormData }) 
               />
               <div className="topup-content">
                 <span>Yes</span>
-                <span className="topup-price">(₹249.00)</span>
+                <span className="topup-price">(₹50.00)</span>
               </div>
             </div>
             
@@ -85,16 +85,16 @@ export const Step11Topups: React.FC<StepProps> = ({ formData, updateFormData }) 
               </div>
             </div>
           </div>
-          <div className="price-display">
+          {/* <div className="price-display">
             <strong>₹{formData.topups.logoRemovalPrice}.00</strong>
-          </div>
+          </div> */}
         </div>
       </div>
 
       {/* Background Music */}
       <div className="form-group">
         <label className="form-label">Customize Background Music</label>
-        <p className="form-help">Delivery within 48 hours</p>
+      
         
         <div className="topup-section">
           <div className="radio-group">
@@ -109,8 +109,8 @@ export const Step11Topups: React.FC<StepProps> = ({ formData, updateFormData }) 
                 onChange={() => handleBackgroundMusicChange(true)}
               />
               <div className="topup-content">
-                <span>Add Background Music</span>
-                <span className="topup-price">(₹199.00)</span>
+                <span>Custom Background Music</span>
+                <span className="topup-price">(₹100.00)</span>
               </div>
             </div>
             
@@ -125,14 +125,14 @@ export const Step11Topups: React.FC<StepProps> = ({ formData, updateFormData }) 
                 onChange={() => handleBackgroundMusicChange(false)}
               />
               <div className="topup-content">
-                <span>No Background Music</span>
+                <span>Default background Music</span>
                 <span className="topup-price">(₹0.00)</span>
               </div>
             </div>
           </div>
-          <div className="price-display">
+          {/* <div className="price-display">
             <strong>₹{formData.topups.backgroundMusicPrice}.00</strong>
-          </div>
+          </div> */}
         </div>
       </div>
 

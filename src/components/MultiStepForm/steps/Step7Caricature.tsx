@@ -24,7 +24,7 @@ export const Step7Caricature: React.FC<StepProps> = ({ formData, updateFormData 
       
       <div className="form-group">
         <div className="radio-group caricature-options">
-          <div 
+          {/* <div 
             className={`radio-option caricature-option ${formData.caricature.type === 'custom' ? 'selected' : ''}`}
             onClick={() => handleCaricatureChange('custom', 999)}
           >
@@ -39,7 +39,7 @@ export const Step7Caricature: React.FC<StepProps> = ({ formData, updateFormData 
               <span className="caricature-title">Custom Caricature</span>
               <span className="caricature-price">(₹999.00)</span>
             </div>
-          </div>
+          </div> */}
           
           <div 
             className={`radio-option caricature-option ${formData.caricature.type === 'generic' ? 'selected' : ''}`}
