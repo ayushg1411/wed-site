@@ -32,7 +32,7 @@ export const VideoGrid: React.FC<VideoGridProps> = ({
                 />
               </div>
               
-              <div onClick={() => handleBookNow(video.id)} className="video-grid__info">
+              <div onClick={() => handleBookNow(video.code)} className="video-grid__info">
                 {/* Tier Badge */}
                 <div className="video-grid__tier-badge" style={{ 
                   backgroundColor: video.tier.bgColor, 

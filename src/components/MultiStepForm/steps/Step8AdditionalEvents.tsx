@@ -65,9 +65,7 @@ export const Step8AdditionalEvents: React.FC<StepProps> = ({ formData, updateFor
             />
           </div>
 
-          <div className="price-display">
-            <strong>₹{event.price}.00</strong>
-          </div>
+        
 
           <div className="form-group">
             <label className="form-label">Event Venue</label>

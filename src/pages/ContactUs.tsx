@@ -135,7 +135,7 @@ export const ContactUs: React.FC = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleInputChange}
-                  className="form-input"
+                  className="form-input2"
                   placeholder="Enter your full name"
                   required
                 />
@@ -150,7 +150,7 @@ export const ContactUs: React.FC = () => {
                   name="mobile"
                   value={formData.mobile}
                   onChange={handleInputChange}
-                  className="form-input"
+                  className="form-input2"
                   placeholder="Enter your phone number"
                   required
                 />
@@ -163,7 +163,7 @@ export const ContactUs: React.FC = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  className="form-input"
+                  className="form-input2"
                   placeholder="Enter your email (optional)"
                 />
               </div>

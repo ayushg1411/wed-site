@@ -47,7 +47,7 @@ export const Step6RSVPDetails: React.FC<StepProps> = ({ formData, updateFormData
 
   return (
     <div className="step-content">
-      <h4 className="step-title">RSVP Slide</h4>
+      <h4 className="step-title">RSVP Details:</h4>
       
       <div className="form-group">
         <label className="form-label">Name for RSVP</label>

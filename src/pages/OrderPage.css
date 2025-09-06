@@ -56,10 +56,72 @@
 
 .order-page__video-description {
   color: #64748b;
-  /* line-height: 1.6; */
   font-size: 14px;
   margin: 0;
-  margin-bottom: 12px;
+  margin-bottom: 4px;
+}
+
+/* Video Meta Information Styles */
+.order-page__video-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.video-meta__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.video-meta__label {
+  font-weight: 600;
+  color: #374151;
+  min-width: 70px;
+}
+
+.video-meta__value {
+  color: #64748b;
+  font-weight: 500;
+}
+
+.video-meta__tier-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.video-meta__tier-badge .tier-icon {
+  font-size: 10px;
+}
+
+/* Mobile responsive for meta info */
+@media (max-width: 768px) {
+  .order-page__video-meta {
+    gap: 6px;
+  }
+  
+  .video-meta__item {
+    font-size: 13px;
+  }
+  
+  .video-meta__label {
+    min-width: 60px;
+  }
+  
+  .video-meta__tier-badge {
+    font-size: 11px;
+    padding: 3px 6px;
+  }
 }
 
 /* Form Section */

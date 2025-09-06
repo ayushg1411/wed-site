@@ -13,6 +13,13 @@ interface Video {
   duration?: string;
   price: number
   originalPrice: number
+  category: string;
+  code: string;
+  tier: {
+    label: string;
+    bgColor: string;
+    color: string;
+  };
 }
 
 
@@ -22,7 +29,7 @@ export const OrderPage: React.FC = () => {
   const [video, setVideo] = useState<Video | null>(null);
 
   useEffect(() => {
-    const foundVideo = sampleVideos.find(v => v.id === videoId);
+    const foundVideo = sampleVideos.find(v => v.code === videoId);
     if (foundVideo) {
       setVideo(foundVideo);
     }
@@ -52,10 +59,29 @@ export const OrderPage: React.FC = () => {
             <div className="order-page__video-info">
              <div style={{display:'flex', justifyContent:'space-between'}}>
               <div>
-                 <h2 className="order-page__video-title">{video.title}</h2>
+                  
+                 <h2 className="order-page__video-title">{video.title}   <div className="video-meta__tier-badge" style={{ 
+                    backgroundColor: video.tier.bgColor, 
+                    color: video.tier.color 
+                  }}>
+                    <span className="tier-icon">👑</span>
+                    {video.tier.label}
+                  </div></h2>
                  {video.description && (
                 <p className="order-page__video-description">{video.description}</p>
               )}
+                <div className="video-meta__item">
+                
+               
+                   <span className="video-grid__code">#{video.code}</span>
+                  <span className="video-grid__duration-badge" title="Video Duration">
+                    {video.duration}
+                  </span>
+                        <span className="video-meta__value">{video.category.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}</span>
+                </div>
+              
+              {/* Video Meta Information */}
+             
               </div>
              <div>   
 

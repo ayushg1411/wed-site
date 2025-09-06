@@ -174,7 +174,7 @@
   color: #ef4444;
 }
 
-.form-input {
+.form-input2 {
   width: 100%;
   padding: 1rem 1.25rem;
   border: 2px solid #e2e8f0;
@@ -185,7 +185,7 @@
   box-sizing: border-box;
 }
 
-.form-input:focus {
+.form-input2:focus {
   outline: none;
   border-color: #3b82f6;
   background: white;
@@ -300,7 +300,7 @@
     padding: 1.5rem;
   }
   
-  .form-input {
+  .form-input2 {
     padding: 0.875rem 1rem;
   }
 }
