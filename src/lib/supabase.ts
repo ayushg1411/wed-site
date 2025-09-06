@@ -114,3 +114,27 @@ export const saveOrderPhotos = async (orderId: string, photos: any[]) => {
     return { success: false, error };
   }
 };
+
+// Submit review function
+export const submitReview = async (reviewData: any) => {
+  try {
+    const { data, error } = await supabase
+      .from('reviews')
+      .insert({
+        name: reviewData.name,
+        rating: reviewData.rating,
+        comment: reviewData.comment,
+        city: reviewData.city,
+        video_id: reviewData.videoId,
+        video_title: reviewData.videoTitle,
+        created_at: new Date().toISOString()
+      })
+      .select();
+
+    if (error) throw error;
+    return { success: true, data };
+  } catch (error) {
+    console.error('Error submitting review:', error);
+    return { success: false, error };
+  }
+};

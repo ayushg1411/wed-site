@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { VideoPlayer } from '../components/VideoGrid/VideoPlayer';
 import { MultiStepForm } from '../components/MultiStepForm/MultiStepForm';
+import { ReviewForm } from '../components/ReviewForm/ReviewForm';
 import './OrderPage.css';
 import { sampleVideos } from '../constatnts/VideosData';
 
@@ -143,6 +144,11 @@ export const OrderPage: React.FC = () => {
             <MultiStepForm videoId={videoId} video={video} videoTitle={video.title} />
           </div>
         </div>
+      </div>
+      
+      {/* Reviews Section */}
+      <div className="order-page__reviews-section">
+        <ReviewForm videoId={videoId} videoTitle={video.title} />
       </div>
     </div>
   );

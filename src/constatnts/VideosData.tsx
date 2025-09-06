@@ -127,7 +127,7 @@ export const sampleVideos = [
     pages: 3,
     price: 1099,
     originalPrice: 2099,
-    category: CATEGORIES.ANNIVERSARY_CARDS,
+    category: CATEGORIES.ANNIVERSARY,
     tier: VIDEO_TIERS.PREMIUM,
     code: 'VIDP10'
   },
@@ -153,7 +153,7 @@ export const sampleVideos = [
     pages: 3,
     price: 899,
     originalPrice: 1599,
-    category: CATEGORIES.BUSINESS,
+    category: CATEGORIES.WEDDING,
     tier: VIDEO_TIERS.GOLD,
     code: 'VIDG12'
   },
@@ -166,7 +166,7 @@ export const sampleVideos = [
     pages: 2,
     price: 599,
     originalPrice: 1199,
-    category: CATEGORIES.BIRTHDAY,
+    category: CATEGORIES.HINDU_WEDDING_CARDS,
     tier: VIDEO_TIERS.SILVER,
     code: 'VIDS13'
   },
@@ -244,7 +244,7 @@ export const sampleVideos = [
     pages: 4,
     price: 1299,
     originalPrice: 2499,
-    category: CATEGORIES.ANNIVERSARY_CARDS,
+    category: CATEGORIES.ANNIVERSARY,
     tier: VIDEO_TIERS.PREMIUM,
     code: 'VIDP19'
   },
@@ -283,7 +283,7 @@ export const sampleVideos = [
     pages: 2,
     price: 499,
     originalPrice: 999,
-    category: CATEGORIES.BIRTHDAY,
+    category: CATEGORIES.HINDU_WEDDING_CARDS,
     tier: VIDEO_TIERS.BASIC,
     code: 'VIDB22'
   },
@@ -296,7 +296,7 @@ export const sampleVideos = [
     pages: 3,
     price: 1099,
     originalPrice: 1999,
-    category: CATEGORIES.BUSINESS,
+    category: CATEGORIES.WEDDING,
     tier: VIDEO_TIERS.GOLD,
     code: 'VIDG23'
   },
