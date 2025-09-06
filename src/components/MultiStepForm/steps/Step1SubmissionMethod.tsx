@@ -6,7 +6,7 @@ export const Step1SubmissionMethod: React.FC<StepProps> = ({ formData, updateFor
   //   updateFormData({ submissionMethod: method });
   // };
 
-  const handleCustomerInfoChange = (field: 'name' | 'mobile' | 'city', value: string) => {
+  const handleCustomerInfoChange = (field: 'name' | 'mobile' | 'email' | 'city', value: string) => {
     updateFormData({
       customerInfo: {
         ...formData.customerInfo,
@@ -50,12 +50,26 @@ export const Step1SubmissionMethod: React.FC<StepProps> = ({ formData, updateFor
             required
           />
         </div>
-          <div className="form-group">
+
+        <div className="form-group">
+          <label className="form-label">
+            Email Address
+          </label>
+          <input
+            type="email"
+            className="form-input"
+            placeholder="Enter your email address"
+            value={formData.customerInfo.email}
+            onChange={(e) => handleCustomerInfoChange('email', e.target.value)}
+          />
+        </div>
+
+        <div className="form-group">
           <label className="form-label">
             City <span className="required">*</span>
           </label>
           <input
-            type="string"
+            type="text"
             className="form-input"
             placeholder="Enter your city"
             value={formData.customerInfo.city}

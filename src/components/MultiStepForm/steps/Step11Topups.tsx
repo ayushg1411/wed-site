@@ -26,7 +26,8 @@ export const Step11Topups: React.FC<StepProps> = ({ formData, updateFormData }) 
       topups: {
         ...formData.topups,
         backgroundMusic: add,
-        backgroundMusicPrice
+        backgroundMusicPrice,
+        customMusicName: add ? formData.topups.customMusicName || '' : undefined
       },
       pricing: {
         ...formData.pricing,
@@ -34,6 +35,15 @@ export const Step11Topups: React.FC<StepProps> = ({ formData, updateFormData }) 
                Number(formData.topups.logoRemovalPrice || 0) + 
                backgroundMusicPrice +
                Number(formData.caricature.price || 0)
+      }
+    });
+  };
+
+  const handleMusicNameChange = (musicName: string) => {
+    updateFormData({
+      topups: {
+        ...formData.topups,
+        customMusicName: musicName
       }
     });
   };
@@ -48,7 +58,6 @@ export const Step11Topups: React.FC<StepProps> = ({ formData, updateFormData }) 
       {/* Logo Removal */}
       <div className="form-group">
         <label className="form-label">Gathbandhan Logo Removal</label>
-       
         
         <div className="topup-section">
           <span className="topup-title">Remove Logo</span>
@@ -95,7 +104,6 @@ export const Step11Topups: React.FC<StepProps> = ({ formData, updateFormData }) 
       <div className="form-group">
         <label className="form-label">Customize Background Music</label>
       
-        
         <div className="topup-section">
           <div className="radio-group">
             <div 
@@ -130,9 +138,25 @@ export const Step11Topups: React.FC<StepProps> = ({ formData, updateFormData }) 
               </div>
             </div>
           </div>
-          {/* <div className="price-display">
-            <strong>₹{formData.topups.backgroundMusicPrice}.00</strong>
-          </div> */}
+
+          {/* Custom Music Name Input - Show only when custom music is selected */}
+          {formData.topups.backgroundMusic && (
+            <div className="custom-music-input">
+              <label className="form-label">
+                Music Name/Artist <span className="required">*</span>
+              </label>
+              <input
+                type="text"
+                className="form-input"
+                placeholder="e.g., Perfect by Ed Sheeran, Tum Hi Ho, etc."
+                value={formData.topups.customMusicName || ''}
+                onChange={(e) => handleMusicNameChange(e.target.value)}
+              />
+              <p className="input-help-text">
+                Please specify the song name and artist. We'll use this for your custom background music.
+              </p>
+            </div>
+          )}
         </div>
       </div>
 

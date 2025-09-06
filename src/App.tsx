@@ -14,6 +14,8 @@ import { sampleVideos } from './constatnts/VideosData';
 import { carouselImages } from './constants/CarouselData';
 import { Reviews } from './pages/Reviews';
 import WhatsappButton from './components/Footer/WhatsappButton';
+import { Dashboard } from './pages/Dashboard';
+import { AdminDashboard } from './pages/AdminDashboard';
 function HomePage() {
 
   const [email, setEmail] = useState('');
@@ -244,7 +246,9 @@ function App() {
               <Route path="/order/:videoId" element={<OrderPage />} />
               <Route path="/category/:category" element={<CategoryComponent />} />
               <Route path="/contact" element={<ContactUs />} />
-                <Route path="/reviews" element={<Reviews />} />
+              <Route path="/reviews" element={<Reviews />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/admin/dashboard" element={<AdminDashboard />} />
             </Routes>
           </main>
 

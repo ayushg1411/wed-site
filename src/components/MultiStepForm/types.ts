@@ -42,6 +42,7 @@ export interface Topups {
   logoRemovalPrice: number;
   backgroundMusic: boolean;
   backgroundMusicPrice: number;
+  customMusicName?: string;
 }
 
 export interface Pricing {
@@ -53,6 +54,7 @@ export interface Pricing {
 export interface CustomerInfo {
   name: string;
   mobile: string;
+  email: string;
   city: string;
 }
 

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Navigation } from './Navigation';
 import { Logo } from './Logo';
 import { ActionButtons } from './ActionButtons';  
@@ -6,6 +7,8 @@ import { LoginModal } from '../LoginModal';
 import { useAuth } from '../../contexts/AuthContext';
 import { HeaderProps } from './types';
 import './Header.css';
+
+const adminEmails = ['ayushguptass14@gmail.com', 'ayeshadigitalcards@gmail.com']; // Add your admin emails here
 
 export const Header: React.FC<HeaderProps> = ({
   logo = { text: 'Gathbandhan', href: '/' },
@@ -15,6 +18,7 @@ export const Header: React.FC<HeaderProps> = ({
   scrollThreshold = 50,
   className
 }) => {
+  const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
@@ -45,6 +49,17 @@ export const Header: React.FC<HeaderProps> = ({
 
   const handleProfileClick = () => {
     setIsProfileMenuOpen(!isProfileMenuOpen);
+  };
+
+  const handleDashboardClick = () => {
+    if (user?.email && adminEmails.includes(user.email)) {
+      navigate('/admin/dashboard');
+      
+    }
+    else{
+      navigate('/dashboard')
+    }
+    setIsProfileMenuOpen(false);
   };
 
   function getFirstAndSecondName(nameString: any): string {
@@ -118,6 +133,18 @@ export const Header: React.FC<HeaderProps> = ({
                     </div>
                   </div>
                   <div className="profile-dropdown__divider"></div>
+                  <p 
+                    className="profile-dropdown__item"
+                    onClick={handleDashboardClick}
+                  >
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <rect x="3" y="3" width="7" height="7"/>
+                      <rect x="14" y="3" width="7" height="7"/>
+                      <rect x="14" y="14" width="7" height="7"/>
+                      <rect x="3" y="14" width="7" height="7"/>
+                    </svg>
+                    Dashboard
+                  </p>
                   <button 
                     className="profile-dropdown__logout"
                     onClick={handleSignOut}

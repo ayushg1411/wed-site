@@ -11,6 +11,9 @@ import { Step9Comments } from './steps/Step9Comments';
 import { Step10PhotosUploads } from './steps/Step10PhotosUploads';
 import { Step11Topups } from './steps/Step11Topups';
 import { FormData } from './types';
+import { submitOrder } from '../../lib/supabase';
+import { useAuth } from '../../contexts/AuthContext';
+import { LoginModal } from '../LoginModal/LoginModal';
 import './MultiStepForm.css';
 
 interface Video {
@@ -29,10 +32,16 @@ interface Video {
 
 export const MultiStepForm: React.FC<MultiStepFormProps> = ({ videoId, video,  videoTitle }) => {
   const [currentStep, setCurrentStep] = useState(1);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+  const { user } = useAuth();
+  
   const [formData, setFormData] = useState<FormData>({
     customerInfo: {
       name: '',
       mobile: '',
+      email: '',
       city: ''
     },
     submissionMethod: 'website',
@@ -128,83 +137,150 @@ export const MultiStepForm: React.FC<MultiStepFormProps> = ({ videoId, video,  v
     }
   };
 
-  const handleSubmit = () => {
-    console.log('Form submitted with data:', formData);
-    
-    // You can also format it nicely for better readability
-    console.log('=== WEDDING INVITATION ORDER DETAILS ===');
-    console.log('Submission Method:', formData.submissionMethod);
-    console.log('Side:', formData.side);
-    console.log('Bride Details:', formData.brideDetails);
-    console.log('Groom Details:', formData.groomDetails);
-    console.log('Wedding Details:', formData.weddingDetails);
-    console.log('RSVP Details:', formData.rsvpDetails);
-    console.log('Caricature:', formData.caricature);
-    console.log('Additional Events:', formData.additionalEvents);
-    console.log('Comments:', formData.comments);
-    console.log('Photos:', formData.photos);
-    console.log('Topups:', formData.topups);
-    console.log('Pricing:', formData.pricing);
-    console.log('Video ID:', videoId);
-    console.log('Video Title:', videoTitle);
-    console.log('==========================================');
+  const handleSubmit = async () => {
+    // Check if user is logged in
+    // if (!user) {
+    //   setIsLoginModalOpen(true);
+    //   return;
+    // }
+
+    // Validation
+    if (!formData.customerInfo.name.trim()) {
+      alert('Please enter your name');
+      setCurrentStep(1);
+      return;
+    }
+
+    if (!formData.customerInfo.mobile.trim()) {
+      alert('Please enter your mobile number');
+      setCurrentStep(1);
+      return;
+    }
+
+    if (formData.topups.backgroundMusic && !formData.topups.customMusicName?.trim()) {
+      alert('Please specify the custom music name');
+      setCurrentStep(11);
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      // Prepare order data
+      const orderData = {
+        ...formData,
+        videoId,
+        videoTitle
+      };
+
+
+      // Submit order to database
+      const orderResult = await submitOrder(orderData, user?.id);
+      
+      if (!orderResult.success) {
+        throw new Error( 'Failed to submit order');
+      }
+
+      const orderId = orderResult.data.id;
+      console.log('Order created with ID:', orderId);
+
+      setSubmitStatus('success');
+      
+      // Show success message
+      alert(`Order submitted successfully! Order ID: ${orderId}\n\nThank you for your order. We'll contact you soon at ${formData.customerInfo.mobile}.`);
+      
+      // Log formatted data for debugging
+
+
+    } catch (error) {
+      console.error('Order submission failed:', error);
+      setSubmitStatus('error');
+      alert(`Failed to submit order: ${error instanceof Error ? error.message : 'Unknown error'}\n\nPlease try again or contact support.`);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleLoginModalClose = () => {
+    setIsLoginModalOpen(false);
   };
 
   return (
-    <div className="multi-step-form">
-      <div className="multi-step-form__header">
-        <h3 className="multi-step-form__title">Submitting Your Wedding Details</h3>
-        <div className="multi-step-form__progress">
-          <div className="progress-bar">
-            <div 
-              className="progress-bar__fill" 
-              style={{ width: `${(currentStep / totalSteps) * 100}%` }}
-            />
+    <>
+      <div className="multi-step-form">
+        <div className="multi-step-form__header">
+          <h3 className="multi-step-form__title">Submitting Your Wedding Details</h3>
+          <div className="multi-step-form__progress">
+            <div className="progress-bar">
+              <div 
+                className="progress-bar__fill" 
+                style={{ width: `${(currentStep / totalSteps) * 100}%` }}
+              />
+            </div>
+            <span className="progress-text">Step {currentStep} of {totalSteps}</span>
           </div>
-          <span className="progress-text">Step {currentStep} of {totalSteps}</span>
+        </div>
+
+        <div className="multi-step-form__content">
+          {renderStep()}
+        </div>
+
+        <div className="multi-step-form__navigation">
+          <button 
+            type="button" 
+            onClick={prevStep} 
+            disabled={currentStep === 1}
+            className="btn btn--secondary"
+          >
+           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+            <line x1="19" y1="12" x2="5" y2="12" />
+            <polyline points="12 19 5 12 12 5" />
+          </svg>
+          </button>
+          
+          {currentStep < totalSteps ? (
+            <button 
+              type="button" 
+              onClick={nextStep}
+              className="btn btn--primary"
+            >
+             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+            </button>
+          ) : (
+            <button 
+              type="submit"
+              onClick={handleSubmit}
+              disabled={isSubmitting}
+              className={`btn btn--primary btn--submit ${isSubmitting ? 'btn--loading' : ''} ${submitStatus === 'success' ? 'btn--success' : ''}`}
+            >
+              {isSubmitting ? (
+                <>
+                  <div className="btn-spinner"></div>
+                  Submitting Order...
+                </>
+              ) : submitStatus === 'success' ? (
+                <>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                  </svg>
+                  Order Submitted!
+                </>
+              ) : (
+                'Submit Order'
+              )}
+            </button>
+          )}
         </div>
       </div>
 
-      <div className="multi-step-form__content">
-        {renderStep()}
-      </div>
-
-      <div className="multi-step-form__navigation">
-        <button 
-          type="button" 
-          onClick={prevStep} 
-          disabled={currentStep === 1}
-          className="btn btn--secondary"
-        >
-         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
-  <line x1="19" y1="12" x2="5" y2="12" />
-  <polyline points="12 19 5 12 12 5" />
-</svg>
-
-        </button>
-        
-        {currentStep < totalSteps ? (
-          <button 
-            type="button" 
-            onClick={nextStep}
-            className="btn btn--primary"
-          >
-           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
-  <line x1="5" y1="12" x2="19" y2="12" />
-  <polyline points="12 5 19 12 12 19" />
-</svg>
-
-          </button>
-        ) : (
-          <button 
-            type="submit"
-            onClick={handleSubmit}
-            className="btn btn--primary btn--submit"
-          >
-            Submit Order
-          </button>
-        )}
-      </div>
-    </div>
+      <LoginModal 
+        isOpen={isLoginModalOpen}
+        onClose={handleLoginModalClose}
+      />
+    </>
   );
 };
