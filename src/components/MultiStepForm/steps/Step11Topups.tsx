@@ -12,10 +12,10 @@ export const Step11Topups: React.FC<StepProps> = ({ formData, updateFormData }) 
       },
       pricing: {
         ...formData.pricing,
-        total: formData.pricing.productPrice + 
+        total: Number(formData.pricing.productPrice) + 
                logoRemovalPrice + 
-               (formData.topups.backgroundMusicPrice || 0) +
-               (formData.caricature.price || 0)
+               Number(formData.topups.backgroundMusicPrice || 0) +
+               Number(formData.caricature.price || 0)
       }
     });
   };
@@ -30,10 +30,10 @@ export const Step11Topups: React.FC<StepProps> = ({ formData, updateFormData }) 
       },
       pricing: {
         ...formData.pricing,
-        total: formData.pricing.productPrice + 
-               (formData.topups.logoRemovalPrice || 0) + 
+        total: Number(formData.pricing.productPrice) + 
+               Number(formData.topups.logoRemovalPrice || 0) + 
                backgroundMusicPrice +
-               (formData.caricature.price || 0)
+               Number(formData.caricature.price || 0)
       }
     });
   };

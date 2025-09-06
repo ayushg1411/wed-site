@@ -13,12 +13,21 @@ import { Step11Topups } from './steps/Step11Topups';
 import { FormData } from './types';
 import './MultiStepForm.css';
 
-interface MultiStepFormProps {
+interface Video {
+  id: string;
+  vimeoId: string;
+  title: string;
+  description?: string;
+  duration?: string;
+  price: number;
+  originalPrice: number;
+}interface MultiStepFormProps {
   videoId?: string;
+  video: Video;
   videoTitle?: string;
 }
 
-export const MultiStepForm: React.FC<MultiStepFormProps> = ({ videoId, videoTitle }) => {
+export const MultiStepForm: React.FC<MultiStepFormProps> = ({ videoId, video,  videoTitle }) => {
   const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState<FormData>({
     submissionMethod: 'website',
@@ -61,9 +70,9 @@ export const MultiStepForm: React.FC<MultiStepFormProps> = ({ videoId, videoTitl
       backgroundMusicPrice: 0
     },
     pricing: {
-      productPrice: 3999,
-      originalPrice: 12999,
-      total: 3999
+      productPrice: video.price,
+      originalPrice: video.originalPrice,
+      total: video.price
     }
   });
 

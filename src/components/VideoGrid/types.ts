@@ -4,9 +4,9 @@ export interface Video {
   title: string;
   description?: string;
   duration?: string;
-  price:string;
+  price:number;
   pages:number;
-  originalPrice:string;
+  originalPrice:number;
   category:string;
   tier: {
     id: string;
