@@ -39,6 +39,7 @@ export const MultiStepForm: React.FC<MultiStepFormProps> = ({ videoId, video,  v
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [showResultModal, setShowResultModal] = useState(false);
   const [resultMessage, setResultMessage] = useState('');
+  const [validationError, setValidationError] = useState('');
   const { user } = useAuth();
   
   const [formData, setFormData] = useState<FormData>({
@@ -101,6 +102,16 @@ export const MultiStepForm: React.FC<MultiStepFormProps> = ({ videoId, video,  v
   };
 
   const nextStep = () => {
+    // Validate Step 1 before proceeding
+    if (currentStep === 1) {
+      const { name, mobile, city } = formData.customerInfo;
+      if (!name.trim() || !mobile.trim() || !city.trim()) {
+        setValidationError('Please fill in all required fields (Name, Mobile Number, and City) before proceeding.');
+        return;
+      }
+      setValidationError(''); // Clear error if validation passes
+    }
+    
     if (currentStep < totalSteps) {
       setCurrentStep(prev => prev + 1);
     }
@@ -232,6 +243,11 @@ export const MultiStepForm: React.FC<MultiStepFormProps> = ({ videoId, video,  v
         </div>
 
         <div className="multi-step-form__content">
+          {validationError && (
+            <div className="validation-error">
+              {validationError}
+            </div>
+          )}
           {renderStep()}
         </div>
 

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { supabase } from '../lib/supabase';
 import './Dashboard.css';
@@ -83,6 +84,7 @@ interface Order {
 
 export const AdminDashboard: React.FC = () => {
   const { user, loading } = useAuth();
+  const navigate = useNavigate();
   const [orders, setOrders] = useState<Order[]>([]);
   const [ordersLoading, setOrdersLoading] = useState(true);
   const [selectedOrder, setSelectedOrder] = useState<Order | null>(null);
@@ -134,9 +136,22 @@ export const AdminDashboard: React.FC = () => {
   return (
     <div className="dashboard">
       <div className="dashboard__container">
+         <button 
+            className="dashboard__back-btn"
+            onClick={() => navigate('/')}
+            aria-label="Go back to home"
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="19" y1="12" x2="5" y2="12" />
+              <polyline points="12 19 5 12 12 5" />
+            </svg>
+          </button>
         <div className="dashboard__header">
-          <h1>My Orders Dashboard</h1>
-          <p>Welcome back, {user.user_metadata?.full_name || 'User'}!</p>
+         
+          <div className="dashboard__header-content">
+            <h1>My Orders Dashboard</h1>
+            <p>Welcome back, {user.user_metadata?.full_name || 'User'}!</p>
+          </div>
         </div>
 
         {ordersLoading ? (
