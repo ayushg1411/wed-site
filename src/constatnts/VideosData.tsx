@@ -16,7 +16,7 @@ export const sampleVideos = [
   },
   {
     id: '2',
-    vimeoId: '1107234012',
+    vimeoId: '1116372692',
     title: 'Elegant Royal Wedding Invitation',
     description: 'Discover powerful tools to grow your business',
     duration: '1:20',
@@ -29,7 +29,7 @@ export const sampleVideos = [
   },
   {
     id: '3',
-    vimeoId: '1107224531',
+    vimeoId: '1116372878',
     title: 'Classic Hindu Wedding Card',
     description: 'See how other businesses thrive with our platform',
     duration: '1:15',
@@ -42,7 +42,7 @@ export const sampleVideos = [
   },
   {
     id: '4',
-    vimeoId: '1107224531',
+    vimeoId: '1116372823',
     title: 'Simple Hindu Wedding Invitation',
     description: 'Beautiful and affordable wedding invitation design',
     duration: '0:30',
@@ -55,7 +55,7 @@ export const sampleVideos = [
   },
   {
     id: '5',
-    vimeoId: '1107224531',
+    vimeoId: '1116372967',
     title: 'Luxury Mehndi Ceremony Invite',
     description: 'Premium mehndi ceremony invitation with stunning visuals',
     duration: '1:45',
@@ -68,7 +68,7 @@ export const sampleVideos = [
   },
   {
     id: '6',
-    vimeoId: '1107224531',
+    vimeoId: '1116373000',
     title: 'Golden Sangeet Invitation',
     description: 'Elegant sangeet ceremony invitation with music theme',
     duration: '1:50',
@@ -81,7 +81,7 @@ export const sampleVideos = [
   },
   {
     id: '7',
-    vimeoId: '1107224531',
+    vimeoId: '1116373042',
     title: 'Haldi Ceremony Invitation',
     description: 'Bright and colorful haldi ceremony invitation',
     duration: '1:20',
@@ -94,7 +94,7 @@ export const sampleVideos = [
   },
   {
     id: '8',
-    vimeoId: '1107224531',
+    vimeoId: '1116373062',
     title: 'Engagement Ceremony Invite',
     description: 'Beautiful engagement ceremony invitation design',
     duration: '2:00',
@@ -107,7 +107,7 @@ export const sampleVideos = [
   },
   {
     id: '9',
-    vimeoId: '1107224531',
+    vimeoId: '1116373088',
     title: 'Save The Date Card',
     description: 'Elegant save the date announcement',
     duration: '0:30',
