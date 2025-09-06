@@ -15,6 +15,16 @@ export const WEDDING_CATEGORIES = [
     href: '/category/engagement-ceremony'
   },
   {
+    id: 'bride-to-be',
+    label: 'Bride To Be',
+    href: '/category/bride-to-be'
+  },
+  {
+    id: 'groom-to-be',
+    label: 'Groom To Be',
+    href: '/category/groom-to-be'
+  },
+  {
     id: 'haldi-ceremony',
     label: 'Haldi Ceremony',
     href: '/category/haldi-ceremony'
@@ -44,14 +54,4 @@ export const WEDDING_CATEGORIES = [
     label: 'Anniversary Cards',
     href: '/category/anniversary-cards'
   },
-  {
-    id: 'caricature-invites',
-    label: 'Caricature Invites',
-    href: '/category/caricature-invites'
-  },
-  {
-    id: 'birthday-cards',
-    label: 'Birthday Cards',
-    href: '/category/birthday-cards'
-  }
 ];

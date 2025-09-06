@@ -59,7 +59,7 @@ const CategoryComponent = () => {
                         <div className="category-hero__stats">
                             <div className="stat-item">
                                 <span className="stat-number">{filteredVideos.length}</span>
-                                <span className="stat-label">Templates</span>
+                                <span className="stat-label">Invites</span>
                             </div>
                             <div className="stat-divider"></div>
                             <div className="stat-item">
@@ -68,7 +68,7 @@ const CategoryComponent = () => {
                             </div>
                             <div className="stat-divider"></div>
                             <div className="stat-item">
-                                <span className="stat-number">100+</span>
+                                <span className="stat-number">10+</span>
                                 <span className="stat-label">Happy Couples</span>
                             </div>
                         </div>

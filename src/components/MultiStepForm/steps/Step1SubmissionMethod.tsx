@@ -53,7 +53,7 @@ export const Step1SubmissionMethod: React.FC<StepProps> = ({ formData, updateFor
 
         <div className="form-group">
           <label className="form-label">
-            Email Address
+            Email Address <span className="required">*</span>
           </label>
           <input
             type="email"
