@@ -104,9 +104,9 @@ export const MultiStepForm: React.FC<MultiStepFormProps> = ({ videoId, video,  v
   const nextStep = () => {
     // Validate Step 1 before proceeding
     if (currentStep === 1) {
-      const { name, mobile, city } = formData.customerInfo;
-      if (!name.trim() || !mobile.trim() || !city.trim()) {
-        setValidationError('Please fill in all required fields (Name, Mobile Number, and City) before proceeding.');
+      const { name, mobile, city, email } = formData.customerInfo;
+      if (!email.trim() || !name.trim() || !mobile.trim() || !city.trim()) {
+        setValidationError('Please fill in all required fields (Name, Email, Mobile Number, and City) before proceeding.');
         return;
       }
       setValidationError(''); // Clear error if validation passes

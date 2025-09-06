@@ -92,7 +92,7 @@ export const VideoGrid: React.FC<VideoGridProps> = ({
                   <button 
                     onClick={(e) => {
                       e.stopPropagation();
-                      handleBookNow(video.id);
+                      handleBookNow(video.code);
                     }}
                     className="video-grid__order-btn"
                   >
