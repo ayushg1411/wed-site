@@ -116,3 +116,43 @@
     height: 18px;
   }
 }
+
+/* Fullscreen specific styles */
+.video-player:-webkit-full-screen {
+  width: 100vw;
+  height: 100vh;
+}
+
+.video-player:-moz-full-screen {
+  width: 100vw;
+  height: 100vh;
+}
+
+.video-player:fullscreen {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Ensure controls are visible in fullscreen */
+.video-player:fullscreen .video-player__controls,
+.video-player:-webkit-full-screen .video-player__controls,
+.video-player:-moz-full-screen .video-player__controls {
+  opacity: 1;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+  padding: 2rem;
+}
+
+.video-player:fullscreen .video-player__control-btn,
+.video-player:-webkit-full-screen .video-player__control-btn,
+.video-player:-moz-full-screen .video-player__control-btn {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.video-player:fullscreen .video-player__control-btn svg,
+.video-player:-webkit-full-screen .video-player__control-btn svg,
+.video-player:-moz-full-screen .video-player__control-btn svg {
+  width: 28px;
+  height: 28px;
+}
