@@ -73,7 +73,7 @@ function HomePage() {
                   <div className="main-hero__visual--phone">
               <div className="hero-card hero-card--main">
                 <img 
-                  src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                  src="https://i.pinimg.com/1200x/47/6d/db/476ddbbaf91065f93ad0f6888e50e9dc.jpg" 
                   alt="Beautiful wedding invitation design"
                 />
                 <div className="hero-card__overlay">
@@ -87,14 +87,14 @@ function HomePage() {
               
               <div className="hero-card hero-card--floating hero-card--1">
                 <img 
-                  src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                       src="https://i.pinimg.com/1200x/c6/33/08/c6330889843a621175437e93dfa2bdc2.jpg" 
                   alt="Wedding couple"
                 />
               </div>
               
               <div className="hero-card hero-card--floating hero-card--2">
                 <img 
-                  src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+               src="https://i.pinimg.com/736x/aa/82/25/aa8225f3b316f9dde4fbbb9059289bb2.jpg" 
                   alt="Wedding rings"
                 />
               </div>
@@ -149,7 +149,7 @@ function HomePage() {
             <div className="main-hero__visual">
               <div className="hero-card hero-card--main">
                 <img 
-                  src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                  src="https://i.pinimg.com/1200x/47/6d/db/476ddbbaf91065f93ad0f6888e50e9dc.jpg" 
                   alt="Beautiful wedding invitation design"
                 />
                 <div className="hero-card__overlay">
@@ -163,14 +163,14 @@ function HomePage() {
               
               <div className="hero-card hero-card--floating hero-card--1">
                 <img 
-                  src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                  src="https://i.pinimg.com/1200x/c6/33/08/c6330889843a621175437e93dfa2bdc2.jpg" 
                   alt="Wedding couple"
                 />
               </div>
               
               <div className="hero-card hero-card--floating hero-card--2">
                 <img 
-                  src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                  src="https://i.pinimg.com/736x/aa/82/25/aa8225f3b316f9dde4fbbb9059289bb2.jpg" 
                   alt="Wedding rings"
                 />
               </div>
