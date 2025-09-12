@@ -7,7 +7,7 @@ export interface Video {
   price:number;
   pages:number;
   originalPrice:number;
-  category:string;
+  categories:any[];
   tier: {
     id: string;
     label: string;

@@ -14,7 +14,7 @@ interface Video {
   duration?: string;
   price: number
   originalPrice: number
-  category: string;
+  categories: any[];
   code: string;
   tier: {
     label: string;
@@ -78,7 +78,13 @@ export const OrderPage: React.FC = () => {
                   <span className="video-grid__duration-badge" title="Video Duration">
                     {video.duration}
                   </span>
-                        <span className="video-meta__value">{video.category.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}</span>
+                    {
+                        video.categories.map((category: any) => (
+                        <span key={category} className="video-grid__category">
+                        <span className="video-meta__value">{category.replace(/-/g, ' ').replace(/\b\w/g, (l:any) => l.toUpperCase())}</span>
+                        </span>
+                      ))
+                      }
                 </div>
               
               {/* Video Meta Information */}

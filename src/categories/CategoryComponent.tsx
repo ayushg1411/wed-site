@@ -8,9 +8,7 @@ import './CategoryComponent.css';
 const CategoryComponent = () => {
     const {category} = useParams<{ category: string }>();
     
-    const filteredVideos = sampleVideos.filter((item)=>{
-        return item.category === category
-    })
+    const filteredVideos = sampleVideos.filter(video => video.categories.includes(category!));
 
     // Find the current category for display
     const currentCategory = WEDDING_CATEGORIES.find(cat => cat.id === category);

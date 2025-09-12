@@ -2,6 +2,19 @@ import { CATEGORIES, VIDEO_TIERS } from './Categories';
 
 export const sampleVideos = [
   {
+    id: '001',
+    vimeoId: '1118012894',
+    title: 'Premium Hindu Wedding Invite',
+    description: 'Exclusive luxury card made for your grand occasions.',
+    duration: '1:09',
+    pages: 8,
+    price: 1199,
+    originalPrice: 2499,
+    categories: [CATEGORIES.HINDU_WEDDING_CARDS, CATEGORIES.WEDDING],
+    tier: VIDEO_TIERS.PREMIUM,
+    code: 'VIDP02'
+  },
+  {
     id: '1',
     vimeoId: '1116372305',
     title: 'Radha Krishna Wedding Invitation Video',
@@ -10,7 +23,7 @@ export const sampleVideos = [
     pages: 3,
     price: 1299,
     originalPrice: 2499,
-    category: CATEGORIES.WEDDING,
+    categories: [CATEGORIES.WEDDING],
     tier: VIDEO_TIERS.PREMIUM,
     code: 'VIDP01'
   },
@@ -23,7 +36,7 @@ export const sampleVideos = [
     pages: 3,
     price: 999,
     originalPrice: 1899,
-    category: CATEGORIES.WEDDING,
+    categories: [CATEGORIES.WEDDING],
     tier: VIDEO_TIERS.GOLD,
     code: 'VIDG02'
   },
@@ -36,7 +49,7 @@ export const sampleVideos = [
     pages: 3,
     price: 799,
     originalPrice: 1499,
-    category: CATEGORIES.HINDU_WEDDING_CARDS,
+    categories: [CATEGORIES.HINDU_WEDDING_CARDS],
     tier: VIDEO_TIERS.SILVER,
     code: 'VIDS03'
   },
@@ -49,7 +62,7 @@ export const sampleVideos = [
     pages: 2,
     price: 499,
     originalPrice: 899,
-    category: CATEGORIES.HINDU_WEDDING_CARDS,
+    categories: [CATEGORIES.HINDU_WEDDING_CARDS],
     tier: VIDEO_TIERS.BASIC,
     code: 'VIDB04'
   },
@@ -62,7 +75,7 @@ export const sampleVideos = [
     pages: 4,
     price: 1199,
     originalPrice: 2299,
-    category: CATEGORIES.MEHNDI_CEREMONY,
+    categories: [CATEGORIES.MEHNDI_CEREMONY],
     tier: VIDEO_TIERS.PREMIUM,
     code: 'VIDP05'
   },
@@ -75,7 +88,7 @@ export const sampleVideos = [
     pages: 3,
     price: 899,
     originalPrice: 1699,
-    category: CATEGORIES.SANGEET_CEREMONY,
+    categories: [CATEGORIES.SANGEET_CEREMONY],
     tier: VIDEO_TIERS.GOLD,
     code: 'VIDG06'
   },
@@ -88,7 +101,7 @@ export const sampleVideos = [
     pages: 2,
     price: 699,
     originalPrice: 1299,
-    category: CATEGORIES.HALDI_CEREMONY,
+    categories: [CATEGORIES.HALDI_CEREMONY],
     tier: VIDEO_TIERS.SILVER,
     code: 'VIDS07'
   },
@@ -101,7 +114,7 @@ export const sampleVideos = [
     pages: 3,
     price: 799,
     originalPrice: 1499,
-    category: CATEGORIES.ENGAGEMENT_CEREMONY,
+    categories: [CATEGORIES.ENGAGEMENT_CEREMONY],
     tier: VIDEO_TIERS.SILVER,
     code: 'VIDS08'
   },
@@ -114,7 +127,7 @@ export const sampleVideos = [
     pages: 1,
     price: 399,
     originalPrice: 799,
-    category: CATEGORIES.SAVE_THE_DATE,
+    categories: [CATEGORIES.SAVE_THE_DATE],
     tier: VIDEO_TIERS.BASIC,
     code: 'VIDB09'
   },
@@ -127,7 +140,7 @@ export const sampleVideos = [
     pages: 3,
     price: 1099,
     originalPrice: 2099,
-    category: CATEGORIES.ANNIVERSARY,
+    categories: [CATEGORIES.ANNIVERSARY],
     tier: VIDEO_TIERS.PREMIUM,
     code: 'VIDP10'
   },
@@ -140,7 +153,7 @@ export const sampleVideos = [
     pages: 4,
     price: 1399,
     originalPrice: 2699,
-    category: CATEGORIES.MUSLIM_WEDDING_CARDS,
+    categories: [CATEGORIES.MUSLIM_WEDDING_CARDS],
     tier: VIDEO_TIERS.PREMIUM,
     code: 'VIDP11'
   },
@@ -153,7 +166,7 @@ export const sampleVideos = [
     pages: 3,
     price: 899,
     originalPrice: 1599,
-    category: CATEGORIES.WEDDING,
+    categories: [CATEGORIES.WEDDING],
     tier: VIDEO_TIERS.GOLD,
     code: 'VIDG12'
   },
@@ -166,7 +179,7 @@ export const sampleVideos = [
     pages: 2,
     price: 599,
     originalPrice: 1199,
-    category: CATEGORIES.HINDU_WEDDING_CARDS,
+    categories: [CATEGORIES.HINDU_WEDDING_CARDS],
     tier: VIDEO_TIERS.SILVER,
     code: 'VIDS13'
   },
@@ -179,7 +192,7 @@ export const sampleVideos = [
     pages: 2,
     price: 549,
     originalPrice: 999,
-    category: CATEGORIES.ENGAGEMENT_CEREMONY,
+    categories: [CATEGORIES.ENGAGEMENT_CEREMONY],
     tier: VIDEO_TIERS.BASIC,
     code: 'VIDB14'
   },
@@ -192,7 +205,7 @@ export const sampleVideos = [
     pages: 3,
     price: 749,
     originalPrice: 1399,
-    category: CATEGORIES.HALDI_CEREMONY,
+    categories: [CATEGORIES.HALDI_CEREMONY],
     tier: VIDEO_TIERS.SILVER,
     code: 'VIDS15'
   },
@@ -205,7 +218,7 @@ export const sampleVideos = [
     pages: 3,
     price: 999,
     originalPrice: 1899,
-    category: CATEGORIES.MEHNDI_CEREMONY,
+    categories: [CATEGORIES.MEHNDI_CEREMONY],
     tier: VIDEO_TIERS.GOLD,
     code: 'VIDG16'
   },
@@ -218,7 +231,7 @@ export const sampleVideos = [
     pages: 4,
     price: 1199,
     originalPrice: 2299,
-    category: CATEGORIES.SANGEET_CEREMONY,
+    categories: [CATEGORIES.SANGEET_CEREMONY],
     tier: VIDEO_TIERS.PREMIUM,
     code: 'VIDP17'
   },
@@ -231,7 +244,7 @@ export const sampleVideos = [
     pages: 1,
     price: 449,
     originalPrice: 899,
-    category: CATEGORIES.SAVE_THE_DATE,
+    categories: [CATEGORIES.SAVE_THE_DATE],
     tier: VIDEO_TIERS.BASIC,
     code: 'VIDB18'
   },
@@ -244,7 +257,7 @@ export const sampleVideos = [
     pages: 4,
     price: 1299,
     originalPrice: 2499,
-    category: CATEGORIES.ANNIVERSARY,
+    categories: [CATEGORIES.ANNIVERSARY],
     tier: VIDEO_TIERS.PREMIUM,
     code: 'VIDP19'
   },
@@ -257,7 +270,7 @@ export const sampleVideos = [
     pages: 3,
     price: 899,
     originalPrice: 1699,
-    category: CATEGORIES.HINDU_WEDDING_CARDS,
+    categories: [CATEGORIES.HINDU_WEDDING_CARDS],
     tier: VIDEO_TIERS.GOLD,
     code: 'VIDG20'
   },
@@ -270,7 +283,7 @@ export const sampleVideos = [
     pages: 3,
     price: 799,
     originalPrice: 1499,
-    category: CATEGORIES.MUSLIM_WEDDING_CARDS,
+    categories: [CATEGORIES.MUSLIM_WEDDING_CARDS],
     tier: VIDEO_TIERS.SILVER,
     code: 'VIDS21'
   },
@@ -283,7 +296,7 @@ export const sampleVideos = [
     pages: 2,
     price: 499,
     originalPrice: 999,
-    category: CATEGORIES.HINDU_WEDDING_CARDS,
+    categories: [CATEGORIES.HINDU_WEDDING_CARDS],
     tier: VIDEO_TIERS.BASIC,
     code: 'VIDB22'
   },
@@ -296,7 +309,7 @@ export const sampleVideos = [
     pages: 3,
     price: 1099,
     originalPrice: 1999,
-    category: CATEGORIES.WEDDING,
+    categories: [CATEGORIES.WEDDING],
     tier: VIDEO_TIERS.GOLD,
     code: 'VIDG23'
   },
@@ -309,7 +322,7 @@ export const sampleVideos = [
     pages: 4,
     price: 1199,
     originalPrice: 2199,
-    category: CATEGORIES.ENGAGEMENT_CEREMONY,
+    categories: [CATEGORIES.ENGAGEMENT_CEREMONY],
     tier: VIDEO_TIERS.PREMIUM,
     code: 'VIDP24'
   },
@@ -322,7 +335,7 @@ export const sampleVideos = [
     pages: 2,
     price: 699,
     originalPrice: 1299,
-    category: CATEGORIES.WEDDING,
+    categories: [CATEGORIES.WEDDING],
     tier: VIDEO_TIERS.SILVER,
     code: 'VIDS25'
   }
