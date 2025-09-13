@@ -76,17 +76,13 @@ export const VideoGrid: React.FC<VideoGridProps> = ({
                   <button 
                     onClick={(e) => {
                       e.stopPropagation();
-                      // Add to cart logic here
+                window.location.href = `/category/${video.categories[0]}`;
                       console.log('Added to cart:', video.id);
                     }}
                     className="video-grid__cart-btn"
                   >
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <circle cx="9" cy="21" r="1"></circle>
-                      <circle cx="20" cy="21" r="1"></circle>
-                      <path d="m1 1 4 4 2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-                    </svg>
-                    Add to Cart
+                
+                   Explore More
                   </button>
                   
                   <button 

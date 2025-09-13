@@ -78,13 +78,16 @@ export const OrderPage: React.FC = () => {
                   <span className="video-grid__duration-badge" title="Video Duration">
                     {video.duration}
                   </span>
-                    {
+                  <div className='video-meta__category_cnt'>
+                       {
                         video.categories.map((category: any) => (
-                        <span key={category} className="video-grid__category">
+                       
                         <span className="video-meta__value">{category.replace(/-/g, ' ').replace(/\b\w/g, (l:any) => l.toUpperCase())}</span>
-                        </span>
+                      
                       ))
                       }
+                  </div>
+                 
                 </div>
               
               {/* Video Meta Information */}

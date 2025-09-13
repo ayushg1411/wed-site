@@ -416,3 +416,104 @@
   position: relative;
   z-index: 2;
 }
+
+.explore-categories-banner {
+  margin: 2rem auto;
+  padding: 2rem 1.5rem;
+  background: linear-gradient(90deg, #6366f1 0%, #3b82f6 100%);
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 24px rgba(99,102,241,0.08);
+  max-width: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.explore-categories-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+
+.explore-categories-icon {
+  flex-shrink: 0;
+  background: #ede9fe;
+  border-radius: 50%;
+  padding: 0.5rem;
+  box-shadow: 0 2px 8px rgba(99,102,241,0.15);
+}
+
+.explore-categories-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  color: #ffffff;
+}
+
+.explore-categories-desc {
+  font-size: 1rem;
+  color: #ffffff;
+  margin: 0.5rem 0 0 0;
+}
+
+.explore-categories-btn {
+  margin-left: auto;
+  padding: 0.75rem 2rem;
+  background: linear-gradient(-270deg, #ffffff 0%, #3b82f6 100%);
+  color: #000000;
+  font-weight: 600;
+  display:flex;
+  font-size: 1.1rem;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius:1rem;
+  box-shadow: 0 2px 8px rgba(99,102,241,0.15);
+  text-decoration: none;
+ transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.explore-categories-btn:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+
+}
+
+
+
+@media (max-width: 768px) {
+
+  .explore-categories-banner {
+  margin: 1rem 0.5rem;
+  padding: 1rem 0.8rem;
+  background: linear-gradient(90deg, #6366f1 0%, #3b82f6 100%);
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 24px rgba(99,102,241,0.08);
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align:   center;
+}
+
+.explore-categories-content {
+  display: flex;
+gap:1px;
+  flex-direction: column;
+
+}
+
+
+.explore-categories-desc {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin: 0.5rem;
+}
+.explore-categories-btn {
+  margin-left: 0;
+    padding: 0.75rem 2rem;
+
+}
+}

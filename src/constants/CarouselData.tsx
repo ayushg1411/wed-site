@@ -1,21 +1,21 @@
 export const carouselImages = [
   {
     id: '1',
-    src: 'https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+    src: 'https://i.pinimg.com/736x/aa/82/25/aa8225f3b316f9dde4fbbb9059289bb2.jpg',
     alt: 'Beautiful wedding ceremony',
     title: 'Your Perfect Wedding Day',
     subtitle: 'Create magical moments with our stunning digital invitations'
   },
   {
     id: '2',
-    src: 'https://images.unsplash.com/photo-1606216794074-735e91aa2c92?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+    src: 'https://i.pinimg.com/1200x/bd/f9/52/bdf952fe521f1232076d029ec75890d0.jpg',
     alt: 'Elegant wedding invitation',
     title: 'Elegant Digital Invitations',
     subtitle: 'Beautifully crafted designs for your special celebration'
   },
   {
     id: '3',
-    src: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80',
+    src: 'https://i.pinimg.com/1200x/ba/a7/79/baa779d70a78ceb788a081403e920a20.jpg',
     alt: 'Wedding celebration',
     title: 'Celebrate Love',
     subtitle: 'Every love story deserves a beautiful beginning'
@@ -29,7 +29,7 @@ export const carouselImages = [
   },
   {
     id: '5',
-    src: 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+    src: 'https://i.pinimg.com/1200x/53/35/fb/5335fb9c1de851faec8ddc2dd3d6f744.jpg',
     alt: 'Wedding rings and flowers',
     title: 'Timeless Memories',
     subtitle: 'Share your joy with friends and family in style'

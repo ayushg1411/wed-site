@@ -100,9 +100,8 @@ function HomePage() {
               </div>
             </div>
               <p className="main-hero__description">
-                Skip traditional invites and bring your "Save the Date" to life with a personalized 
-                wedding invitation video designed just for you. Add your photos, clips, text, and 
-                music—share your love story in a way that's as unique as your celebration.
+               Ditch the traditional invites—bring your big day to life with a wedding invitation video!
+Showcase your love story with a personalized video clips, heartfelt text, and the perfect soundtrack. It's a unique, unforgettable way to invite your guests and set the tone for your celebration.
               </p>
 
               <div className="main-hero__features">
@@ -187,9 +186,24 @@ function HomePage() {
       />
  <WhatsappButton phoneNumber='7017835443'/>
       <VideoGrid
-        videos={sampleVideos}
+        videos={sampleVideos.slice(0, 12)}
         title="Digital Wedding Invitations"
       />
+      <div className="explore-categories-banner">
+  <div className="explore-categories-content">
+   
+    <div className='explore-categories-text'>
+      <h2 className="explore-categories-title">Explore Categories</h2>
+      <p className="explore-categories-desc">Find the perfect invitation style for every celebration!</p>
+    </div>
+    <a href="/category/wedding-invites" className="explore-categories-btn">
+      Browse Now <span style={{ marginTop:'0.3rem', marginLeft: '0.5rem' }}><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M5 12h14M12 5l7 7-7 7"/>
+</svg>
+</span>
+    </a>
+  </div>
+</div>
       <div className="footer__newsletter">
         <div className="footer__newsletter-container">
           <div className="footer__newsletter-left">
@@ -228,6 +242,9 @@ function HomePage() {
           </div>
         </div>
       </div>
+
+      {/* Explore Categories Banner */}
+
 
     </>
   );

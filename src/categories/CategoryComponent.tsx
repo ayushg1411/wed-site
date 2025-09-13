@@ -25,9 +25,9 @@ const CategoryComponent = () => {
             'sangeet-ceremony': 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
             'hindu-wedding-cards': 'https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
             'muslim-wedding-cards': 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-            'anniversary-cards': 'https://images.unsplash.com/photo-1606800052052-a08af7148866?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-            'caricature-invites': 'https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-            'birthday-cards': 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+            'bride-to-be': 'https://images.unsplash.com/photo-1606800052052-a08af7148866?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+            'anniversary-cardss': 'https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+            'groom-to-be': 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
         };
         return images[categoryId as keyof typeof images] || images['wedding-invites'];
     };

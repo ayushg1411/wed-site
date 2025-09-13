@@ -88,6 +88,13 @@
   font-weight: 500;
 }
 
+.video-meta__category_cnt{
+ display: flex;
+ flex-direction: row;
+ gap:4px
+}
+
+
 .video-meta__tier-badge {
   display: inline-flex;
   align-items: center;
@@ -286,6 +293,11 @@
   .order-page__form-section {
     padding: 1.25rem;
   }
+  .video-meta__category_cnt{
+ display: flex;
+ flex-direction: column;
+
+}
 }
 
 .order-page__reviews-section {
