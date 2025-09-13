@@ -17,6 +17,7 @@ import WhatsappButton from './components/Footer/WhatsappButton';
 import { Dashboard } from './pages/Dashboard';
 import { AdminDashboard } from './pages/AdminDashboard';
 import TermsOfService from './pages/TermsOfService';
+import FAQPage from './pages/FAQ';
 function HomePage() {
 
   const [email, setEmail] = useState('');
@@ -268,6 +269,7 @@ function App() {
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/admin/dashboard" element={<AdminDashboard />} />
               <Route path="/terms" element={<TermsOfService />} />
+                  <Route path="/faq" element={<FAQPage />} />
             </Routes>
           </main>
 
