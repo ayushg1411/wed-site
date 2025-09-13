@@ -11,13 +11,14 @@
 
 .video-grid__header {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .video-grid__title {
   font-size: 2.5rem;
-  font-weight: 600;
-  color: #1a202c;
+  font-weight: 500;
+  color: #6e51da;
+   font-family: "Roboto Condensed", sans-serif;
   margin: 0;
 }
 
@@ -194,7 +195,7 @@
   }
   
   .video-grid__header {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
   }
   
   .video-grid__info {

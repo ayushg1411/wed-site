@@ -9,10 +9,15 @@ export const WEDDING_CATEGORIES = [
     label: 'Save The Date',
     href: '/category/save-the-date'
   },
+    {
+    id: 'hindu-wedding-cards',
+    label: 'Hindu Wedding Cards',
+    href: '/category/hindu-wedding-cards'
+  },
   {
-    id: 'engagement-ceremony',
-    label: 'Engagement Ceremony',
-    href: '/category/engagement-ceremony'
+    id: 'muslim-wedding-cards',
+    label: 'Muslim Wedding Cards',
+    href: '/category/muslim-wedding-cards'
   },
   {
     id: 'bride-to-be',
@@ -23,6 +28,11 @@ export const WEDDING_CATEGORIES = [
     id: 'groom-to-be',
     label: 'Groom To Be',
     href: '/category/groom-to-be'
+  },
+  {
+    id: 'engagement-ceremony',
+    label: 'Engagement Ceremony',
+    href: '/category/engagement-ceremony'
   },
   {
     id: 'haldi-ceremony',
@@ -38,16 +48,6 @@ export const WEDDING_CATEGORIES = [
     id: 'sangeet-ceremony',
     label: 'Sangeet Ceremony',
     href: '/category/sangeet-ceremony'
-  },
-  {
-    id: 'hindu-wedding-cards',
-    label: 'Hindu Wedding Cards',
-    href: '/category/hindu-wedding-cards'
-  },
-  {
-    id: 'muslim-wedding-cards',
-    label: 'Muslim Wedding Cards',
-    href: '/category/muslim-wedding-cards'
   },
   {
     id: 'anniversary-cards',

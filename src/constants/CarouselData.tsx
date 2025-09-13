@@ -8,7 +8,7 @@ export const carouselImages = [
   },
   {
     id: '2',
-    src: 'https://i.pinimg.com/1200x/a0/6a/6e/a06a6e9fd8689aff56f7c516d7c121d8.jpg',
+    src: 'https://i.pinimg.com/1200x/aa/59/4e/aa594e7874da00816adc335c41f5ebfb.jpg',
     alt: 'Elegant wedding invitation',
     title: 'Elegant Digital Invitations',
     subtitle: 'Beautifully crafted designs for your special celebration'
@@ -22,7 +22,7 @@ export const carouselImages = [
   },
   {
     id: '4',
-    src: 'https://i.pinimg.com/736x/ef/a8/de/efa8def907afb477f785fadbbdcb3f89.jpg',
+    src: 'https://i.pinimg.com/1200x/74/f9/b5/74f9b5d91f0ef9561a1830a76d20597b.jpg',
     alt: 'Wedding flowers and decoration',
     title: 'Stunning Designs',
     subtitle: 'Professional templates that capture your unique style'

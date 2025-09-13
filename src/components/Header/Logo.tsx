@@ -15,8 +15,8 @@ export const Logo: React.FC<LogoProps> = ({ text, href }) => {
     <div className="header__logo">
       <a href={href}>
         <img 
-          width={window.innerWidth <= 768 ? 50 : 200} 
-          height={window.innerWidth <= 768 ? 50 : 70} 
+          width={window.innerWidth <= 768 ? 70 : 240} 
+          height={window.innerWidth <= 768 ? 70 : 80} 
           src={window.innerWidth <= 768? mobile_logo : laptoo_logo} 
           alt={text}
           className="header__logo-img"
