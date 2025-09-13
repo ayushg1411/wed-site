@@ -7,7 +7,7 @@ const TermsOfService: React.FC = () => (
       Welcome to Gathbandhan – your go-to place for digital wedding invites. Please take a moment to review our simplified terms to ensure a smooth experience.
     </p>
 
-    <h2>📦 Delivery Policy</h2>
+    <h2>1. Delivery Policy</h2>
     <ul>
  
       <li>Custom Orders  Delivered within 72 working hours.</li>
@@ -16,14 +16,14 @@ const TermsOfService: React.FC = () => (
       <li><strong>Note:</strong> Delivery time may be slightly longer during peak seasons or festivals.</li>
     </ul>
 
-    <h2>💰 Payment &amp; Pricing</h2>
+    <h2>2. Payment &amp; Pricing</h2>
     <ul>
       <li>30% or 50% advance payment is required.</li>
       <li>All prices are fixed and already discounted — no bargaining.</li>
       {/* <li>18% GST is applicable on all orders.</li> */}
     </ul>
 
-    <h2>📄 Revisions &amp; Edits</h2>
+    <h2>3. Revisions &amp; Edits</h2>
     <ul>
       <li>1 free revision is included for custom orders after the first draft.</li>
       <li>Additional changes will cost:
@@ -36,7 +36,7 @@ const TermsOfService: React.FC = () => (
       <li>No major edits (e.g. rearranging video frames) unless paid for.</li>
     </ul>
 
-    <h2>🧾 What could be Customized</h2>
+    <h2>4. What could be Customized</h2>
     <ul>
       <li>Changes like Text, music (1 song only), and images based on the template.</li>
       <li>Cannot change Video structure, animations, or request open/template files.</li>
@@ -44,7 +44,7 @@ const TermsOfService: React.FC = () => (
       <li>No content changes after final approval.</li>
     </ul>
 
-    <h2>🚫 Refund Policy</h2>
+    <h2>5. Refund Policy</h2>
     <ul>
       <li>As this is a digital product, all sales are final.</li>
       <li>No refunds for:
@@ -62,20 +62,20 @@ const TermsOfService: React.FC = () => (
       </li>
     </ul>
 
-    <h2>📁 File Format Policy</h2>
+    <h2>  6. File Format Policy</h2>
     <ul>
       <li>Final delivery is in HD video (1080x1920 px) format.</li>
       <li>No raw or source files will be shared.</li>
       <li>We do not offer printing services, but we can provide PDF files for print use upon request (₹100 per page).</li>
     </ul>
 
-    <h2>📷 Usage &amp; Portfolio</h2>
+    <h2>7. Usage &amp; Portfolio</h2>
     <ul>
       <li>We may showcase your invite/video in our portfolio.</li>
       <li>If you don’t want this, you can let us know at the time of ordering or email us later to remove it.</li>
     </ul>
 
-    <h2>✉️ Contact Us</h2>
+    <h2>8. Contact Us</h2>
     <ul>
       <li><strong>Phone:</strong> <a href="tel:+917017835443">+91 70178 35443</a></li>
       <li><strong>Email:</strong> <a href="mailto:ayushguptass14@gmail.com">ayushguptass14@gmail.com</a></li>
