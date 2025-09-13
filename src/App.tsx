@@ -16,6 +16,7 @@ import { Reviews } from './pages/Reviews';
 import WhatsappButton from './components/Footer/WhatsappButton';
 import { Dashboard } from './pages/Dashboard';
 import { AdminDashboard } from './pages/AdminDashboard';
+import TermsOfService from './pages/TermsOfService';
 function HomePage() {
 
   const [email, setEmail] = useState('');
@@ -266,6 +267,7 @@ function App() {
               <Route path="/reviews" element={<Reviews />} />
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/admin/dashboard" element={<AdminDashboard />} />
+              <Route path="/terms" element={<TermsOfService />} />
             </Routes>
           </main>
 

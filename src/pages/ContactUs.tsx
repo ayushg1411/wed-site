@@ -63,6 +63,12 @@ export const ContactUs: React.FC = () => {
           <p className="contact-hero__subtitle">
             Ready to create your perfect wedding invitation? We'd love to hear from you!
           </p>
+           <p className="contact-hero__subtitle">
+            Call us now : +91 7017835443
+          </p>
+           <p className="contact-hero__subtitle">
+           Email us : ayushguptass14@gmail.com
+          </p>
         </div>
         <div className="contact-hero__image">
           <img 

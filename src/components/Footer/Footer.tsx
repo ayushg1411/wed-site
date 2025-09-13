@@ -67,7 +67,7 @@ const whatsappNumber =7017835443
             <div className="footer__section">
               <h4 className="footer__section-title">Legal</h4>
               <ul className="footer__links">
-                <li><a href="/privacy" className="footer__link">Privacy Policy</a></li>
+                {/* <li><a href="/privacy" className="footer__link">Privacy Policy</a></li> */}
                 <li><a href="/terms" className="footer__link">Terms of Service</a></li>
                
               </ul>

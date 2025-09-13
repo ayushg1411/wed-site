@@ -204,7 +204,7 @@ export const MultiStepForm: React.FC<MultiStepFormProps> = ({ videoId, video,  v
       // Auto close and redirect after 3 seconds
       setTimeout(() => {
         setShowResultModal(false);
-        navigate('/');
+        navigate('/dashboard');
       }, 5000);
 
     } catch (error) {
