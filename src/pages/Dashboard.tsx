@@ -149,7 +149,7 @@ export const Dashboard: React.FC = () => {
           </button>
         <div className="dashboard__header">
           <div className="dashboard__header-content">
-            <h1>My Orders Dashboard</h1>
+            <h1>My Orders </h1>
             <p>Welcome back, {user.user_metadata?.full_name || 'User'}!</p>
           </div>
         </div>
