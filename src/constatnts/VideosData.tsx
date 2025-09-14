@@ -2,7 +2,7 @@ import { CATEGORIES, VIDEO_TIERS } from './Categories';
 
 export const sampleVideos = [
   {
-    id: '001',
+    id: '1',
     vimeoId: '1118012894',
     title: 'Premium Hindu Wedding Invite',
     description: 'Exclusive luxury card made for your grand occasions.',
@@ -15,7 +15,7 @@ export const sampleVideos = [
     code: 'VIDP01'
   },
   {
-    id: '1',
+    id: '2',
     vimeoId: '1116372305',
     title: 'Modern Engagement ceremony invite',
     description: 'Trendy invite with updated look for engagement events',
@@ -26,19 +26,6 @@ export const sampleVideos = [
     categories: [CATEGORIES.ENGAGEMENT_CEREMONY],
     tier: VIDEO_TIERS.SILVER,
     code: 'VIDS01'
-  },
-  {
-    id: '2',
-    vimeoId: '1116372692',
-    title: 'Elegant Royal Wedding Invitation',
-    description: 'Discover powerful tools to grow your business',
-    duration: '1:20',
-    pages: 3,
-    price: 999,
-    originalPrice: 1899,
-    categories: [CATEGORIES.WEDDING],
-    tier: VIDEO_TIERS.GOLD,
-    code: 'VIDG02'
   },
   {
     id: '3',
@@ -82,8 +69,8 @@ export const sampleVideos = [
   {
     id: '6',
     vimeoId: '1116373000',
-    title: 'Trendy Muslim Wedding Digital Invite',
-    description: 'Modern wedding invite design with beautiful patterns.',
+    title: 'Trendy Muslim Engagement Digital Invite',
+    description: 'Modern engagement invite design with beautiful patterns.',
     duration: '0:28',
     pages: 4,
     price: 499,
