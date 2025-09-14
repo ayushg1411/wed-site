@@ -78,7 +78,7 @@ const TermsOfService: React.FC = () => (
     <h2>8. Contact Us</h2>
     <ul>
       <li><strong>Phone:</strong> <a href="tel:+917017835443">+91 70178 35443</a></li>
-      <li><strong>Email:</strong> <a href="mailto:ayushguptass14@gmail.com">ayushguptass14@gmail.com</a></li>
+      <li><strong>Email:</strong> <a href="mailto:gathbandhhan@gmail.com">gathbandhhan@gmail.com</a></li>
     </ul>
   </div>
 );

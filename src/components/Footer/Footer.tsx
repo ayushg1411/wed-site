@@ -48,7 +48,7 @@ const whatsappNumber =7017835443
               <h4 className="footer__section-title">Quick Links</h4>
               <ul className="footer__links">
                 {/* <li><a href="/features" className="footer__link">Features</a></li> */}
-                <li><a href="/pricing" className="footer__link">Pricing</a></li>
+                {/* <li><a href="/pricing" className="footer__link">Pricing</a></li> */}
                 <li><a href="/reviews" className="footer__link">Reviews</a></li>
                 {/* <li><a href="/templates" className="footer__link">Templates</a></li> */}
               </ul>

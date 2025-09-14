@@ -8,7 +8,7 @@ import { useAuth } from '../../contexts/AuthContext';
 import { HeaderProps } from './types';
 import './Header.css';
 
-const adminEmails = ['ayushguptass14@gmail.com', 'ayeshadigitalcards@gmail.com']; // Add your admin emails here
+const adminEmails = ['ayushguptass14@gmail.com', 'gathbandhhan@gmail.com', 'ayeshadigitalcards@gmail.com']; // Add your admin emails here
 
 export const Header: React.FC<HeaderProps> = ({
   logo = { text: 'Gathbandhan', href: '/' },

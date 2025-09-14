@@ -71,7 +71,7 @@ export const ContactUs: React.FC = () => {
             Call us now : +91 7017835443
           </p>
            <p className="contact-hero__subtitle">
-           Email us : ayushguptass14@gmail.com
+           Email us : gathbandhhan@gmail.com
           </p>
         </div>
         <div className="contact-hero__image">
