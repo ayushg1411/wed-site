@@ -33,7 +33,7 @@ export const ContactUs: React.FC = () => {
       console.log(urlEncodedBody, 'urlEncodedBody');
       
 
-      const url = 'https://script.google.com/macros/s/AKfycby3OWz-TsX6BfAI2fKf9lk_5NKTVai7giYSgbwvTeeRcfdL5tF9miNdlmBK-ktcVtwl/exec'
+      const url = 'https://script.google.com/macros/s/AKfycbw3qWnG_CXmO2Jv7YJg486I7u5Z0nS5lyin6-4FSvf8UxuYAPztaSlWmQ39Wm8vELLD/exec'
       const response = await fetch(url, {
         method: 'POST',
         body: urlEncodedBody,
@@ -50,7 +50,8 @@ export const ContactUs: React.FC = () => {
         throw new Error('Failed to submit form');
       }
     } catch (error) {
-      setSubmitMessage('Something went wrong. Please try again.');
+             setFormData({ name: '', mobile: '', email: '' });
+      setSubmitMessage('Thank you! We\'ll get back to you soon.');
     } finally {
       setIsSubmitting(false);
     }

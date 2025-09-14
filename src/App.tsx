@@ -33,7 +33,7 @@ function HomePage() {
       }).toString();
       setEmail('');
       const url =
-        'https://script.google.com/macros/s/AKfycby3OWz-TsX6BfAI2fKf9lk_5NKTVai7giYSgbwvTeeRcfdL5tF9miNdlmBK-ktcVtwl/exec'
+        'https://script.google.com/macros/s/AKfycbw3qWnG_CXmO2Jv7YJg486I7u5Z0nS5lyin6-4FSvf8UxuYAPztaSlWmQ39Wm8vELLD/exec'
 
       const response = await fetch(url, {
         method: 'POST',
