@@ -30,8 +30,10 @@ export const ContactUs: React.FC = () => {
         mobile: formData.mobile,
         email: formData.email || ''
       }).toString();
+      console.log(urlEncodedBody, 'urlEncodedBody');
+      
 
-      const url = 'https://script.google.com/macros/s/AKfycbzEbmdBfdRQiHn2WGsKiLFIMR8g7bEV2ipWg4SHT9aDl7vCCo5NJSuUN4OARMK1nwj4/exec'
+      const url = 'https://script.google.com/macros/s/AKfycby3OWz-TsX6BfAI2fKf9lk_5NKTVai7giYSgbwvTeeRcfdL5tF9miNdlmBK-ktcVtwl/exec'
       const response = await fetch(url, {
         method: 'POST',
         body: urlEncodedBody,
@@ -39,7 +41,8 @@ export const ContactUs: React.FC = () => {
           'Content-Type': 'application/x-www-form-urlencoded',
         },
       });
-
+ console.log('resonse', response);
+ 
       if (response.ok) {
         setSubmitMessage('Thank you! We\'ll get back to you soon.');
         setFormData({ name: '', mobile: '', email: '' });
