@@ -76,8 +76,8 @@ export const VideoGrid: React.FC<VideoGridProps> = ({
                   <button 
                     onClick={(e) => {
                       e.stopPropagation();
+               if(window.location.href!==`/category/${video.categories[0]}`) 
                 window.location.href = `/category/${video.categories[0]}`;
-                      console.log('Added to cart:', video.id);
                     }}
                     className="video-grid__cart-btn"
                   >
