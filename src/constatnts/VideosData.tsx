@@ -1,8 +1,21 @@
 import { CATEGORIES, VIDEO_TIERS } from './Categories';
 
 export const sampleVideos = [
-  {
+    {
     id: '1',
+    vimeoId: '1120367976',
+    title: 'Designer Premium Wedding Story Invite',
+    description: 'Premium designer card for lovely milestone events.',
+    duration: '0:53',
+    pages: 8,
+    price: 1499,
+    originalPrice: 1799,
+    categories: [CATEGORIES.HINDU_WEDDING_CARDS, CATEGORIES.WEDDING],
+    tier: VIDEO_TIERS.PREMIUM,
+    code: 'VIDP04'
+  },
+  {
+    id: '2',
     vimeoId: '1118012894',
     title: 'Premium Hindu Wedding Invite',
     description: 'Exclusive luxury card made for your grand occasions.',
@@ -14,8 +27,21 @@ export const sampleVideos = [
     tier: VIDEO_TIERS.PREMIUM,
     code: 'VIDP01'
   },
-    {
-    id: '2',
+  {
+    id: '16',
+    vimeoId: '1120465443',
+    title: 'Royal Rajasthani Wedding Invite',
+    description: 'Platinum-style wedding invite with premium luxury feel.',
+    duration: '1:15',
+    pages: 10,
+    price: 1999,
+    originalPrice: 2399,
+    categories: [CATEGORIES.HINDU_WEDDING_CARDS, CATEGORIES.WEDDING],
+    tier: VIDEO_TIERS.PREMIUM,
+    code: 'VIDP05'
+  },
+  {
+    id: '3',
     vimeoId: '1120367944',
     title: 'Premium Sikh Wedding Invite',
     description: 'Elite and luxury invite designed for top-class celebrations.',
@@ -27,8 +53,8 @@ export const sampleVideos = [
     tier: VIDEO_TIERS.PREMIUM,
     code: 'VIDP02'
   },
-    {
-    id: '3',
+  {
+    id: '4',
     vimeoId: '1120368126',
     title: 'Exclusive Hindu Wedding Invite/Radha Krishna theme',
     description: 'Exclusive luxury card made for grand occasions.',
@@ -36,22 +62,9 @@ export const sampleVideos = [
     pages: 10,
     price: 1499,
     originalPrice: 1899,
-    categories: [CATEGORIES.HINDU_WEDDING_CARDS,CATEGORIES.WEDDING],
+    categories: [CATEGORIES.HINDU_WEDDING_CARDS, CATEGORIES.WEDDING],
     tier: VIDEO_TIERS.PREMIUM,
     code: 'VIDP03'
-  },
-  {
-    id: '4',
-    vimeoId: '1116372823',
-    title: 'Simple Hindu Wedding Invitation',
-    description: 'Beautiful and affordable wedding invitation design',
-    duration: '0:27',
-    pages: 4,
-    price: 499,
-    originalPrice: 699,
-    categories: [CATEGORIES.HINDU_WEDDING_CARDS],
-    tier: VIDEO_TIERS.SILVER,
-    code: 'VIDS02'
   },
   {
     id: '5',
@@ -68,16 +81,16 @@ export const sampleVideos = [
   },
     {
     id: '6',
-    vimeoId: '1120367976',
-    title: 'Designer Premium Wedding Story Invite',
-    description: 'Premium designer card for lovely milestone events.',
-    duration: '0:53',
-    pages: 8,
-    price: 1499,
-    originalPrice: 1799,
-    categories: [CATEGORIES.HINDU_WEDDING_CARDS,CATEGORIES.WEDDING ],
-    tier: VIDEO_TIERS.PREMIUM,
-    code: 'VIDP04'
+    vimeoId: '1116372823',
+    title: 'Simple Hindu Wedding Invitation',
+    description: 'Beautiful and affordable wedding invitation design',
+    duration: '0:27',
+    pages: 4,
+    price: 499,
+    originalPrice: 699,
+    categories: [CATEGORIES.HINDU_WEDDING_CARDS],
+    tier: VIDEO_TIERS.SILVER,
+    code: 'VIDS02'
   },
   {
     id: '7',
