@@ -236,7 +236,7 @@ Showcase your love story with a personalized video clips, heartfelt text, and th
           <div className="footer__newsletter-right">
             <div className="footer__newsletter-image">
               <img
-                  src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80" 
+                  src="https://i.pinimg.com/736x/ee/c2/9a/eec29a9e1144e2eed18231ee0871bf40.jpg" 
                 alt="Wedding invitation design"
                 className="newsletter-image"
               />

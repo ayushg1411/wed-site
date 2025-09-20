@@ -14,31 +14,31 @@ export const sampleVideos = [
     tier: VIDEO_TIERS.PREMIUM,
     code: 'VIDP01'
   },
-  {
+    {
     id: '2',
-    vimeoId: '1116372305',
-    title: 'Modern Engagement ceremony invite',
-    description: 'Trendy invite with updated look for engagement events',
-    duration: '0:31',
-    pages: 4,
-    price: 499,
-    originalPrice: 699,
-    categories: [CATEGORIES.ENGAGEMENT_CEREMONY],
-    tier: VIDEO_TIERS.SILVER,
-    code: 'VIDS01'
+    vimeoId: '1120367944',
+    title: 'Premium Sikh Wedding Invite',
+    description: 'Elite and luxury invite designed for top-class celebrations.',
+    duration: '0:53',
+    pages: 9,
+    price: 1499,
+    originalPrice: 1699,
+    categories: [CATEGORIES.HINDU_WEDDING_CARDS, CATEGORIES.WEDDING],
+    tier: VIDEO_TIERS.PREMIUM,
+    code: 'VIDP02'
   },
-  {
+    {
     id: '3',
-    vimeoId: '1116372878',
-    title: 'Lovely Wedding Digital Invite',
-    description: 'Sweet digital invite to make moments memorable.',
-    duration: '0:20',
-    pages: 3,
-    price: 299,
-    originalPrice: 399,
-    categories: [CATEGORIES.HINDU_WEDDING_CARDS],
-    tier: VIDEO_TIERS.BASIC,
-    code: 'VIDB05'
+    vimeoId: '1120368126',
+    title: 'Exclusive Hindu Wedding Invite/Radha Krishna theme',
+    description: 'Exclusive luxury card made for grand occasions.',
+    duration: '1:23',
+    pages: 10,
+    price: 1499,
+    originalPrice: 1899,
+    categories: [CATEGORIES.HINDU_WEDDING_CARDS,CATEGORIES.WEDDING],
+    tier: VIDEO_TIERS.PREMIUM,
+    code: 'VIDP03'
   },
   {
     id: '4',
@@ -66,18 +66,18 @@ export const sampleVideos = [
     tier: VIDEO_TIERS.BASIC,
     code: 'VIDB01'
   },
-  {
+    {
     id: '6',
-    vimeoId: '1116373000',
-    title: 'Trendy Muslim Engagement Digital Invite',
-    description: 'Modern engagement invite design with beautiful patterns.',
-    duration: '0:28',
-    pages: 4,
-    price: 499,
-    originalPrice: 599,
-    categories: [CATEGORIES.MUSLIM_WEDDING_CARDS],
-    tier: VIDEO_TIERS.SILVER,
-    code: 'VIDS03'
+    vimeoId: '1120367976',
+    title: 'Designer Premium Wedding Story Invite',
+    description: 'Premium designer card for lovely milestone events.',
+    duration: '0:53',
+    pages: 8,
+    price: 1499,
+    originalPrice: 1799,
+    categories: [CATEGORIES.HINDU_WEDDING_CARDS,CATEGORIES.WEDDING ],
+    tier: VIDEO_TIERS.PREMIUM,
+    code: 'VIDP04'
   },
   {
     id: '7',
@@ -156,5 +156,44 @@ export const sampleVideos = [
     categories: [CATEGORIES.SANGEET_CEREMONY],
     tier: VIDEO_TIERS.BASIC,
     code: 'VIDB06'
-  }
+  },
+  {
+    id: '13',
+    vimeoId: '1116372305',
+    title: 'Modern Engagement ceremony invite',
+    description: 'Trendy invite with updated look for engagement events',
+    duration: '0:31',
+    pages: 4,
+    price: 499,
+    originalPrice: 699,
+    categories: [CATEGORIES.ENGAGEMENT_CEREMONY],
+    tier: VIDEO_TIERS.SILVER,
+    code: 'VIDS01'
+  },
+  {
+    id: '14',
+    vimeoId: '1116373000',
+    title: 'Trendy Muslim Engagement Digital Invite',
+    description: 'Modern engagement invite design with beautiful patterns.',
+    duration: '0:28',
+    pages: 4,
+    price: 499,
+    originalPrice: 599,
+    categories: [CATEGORIES.MUSLIM_WEDDING_CARDS],
+    tier: VIDEO_TIERS.SILVER,
+    code: 'VIDS03'
+  },
+  {
+    id: '15',
+    vimeoId: '1116372878',
+    title: 'Lovely Wedding Digital Invite',
+    description: 'Sweet digital invite to make moments memorable.',
+    duration: '0:20',
+    pages: 3,
+    price: 299,
+    originalPrice: 399,
+    categories: [CATEGORIES.HINDU_WEDDING_CARDS],
+    tier: VIDEO_TIERS.BASIC,
+    code: 'VIDB05'
+  },
 ];

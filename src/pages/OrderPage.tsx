@@ -155,6 +155,27 @@ export const OrderPage: React.FC = () => {
         </div>
       </div>
       
+      {/* Need Help Button */}
+      <div style={{ display: 'flex', justifyContent: 'center', margin: '24px 0' }}>
+        <a
+          href="https://wa.me/919999999999" // <-- Replace with your WhatsApp number
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            background: '#25D366',
+            color: '#fff',
+            padding: '10px 24px',
+            borderRadius: '24px',
+            fontWeight: 'bold',
+            textDecoration: 'none',
+            fontSize: '16px',
+            boxShadow: '0 2px 8px rgba(0,0,0,0.08)'
+          }}
+        >
+          Need Help ? 
+        </a>
+      </div>
+
       {/* Reviews Section */}
       <div className="order-page__reviews-section">
         <ReviewForm videoId={videoId} videoTitle={video.title} />
