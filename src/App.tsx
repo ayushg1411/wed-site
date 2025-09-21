@@ -18,6 +18,7 @@ import { Dashboard } from './pages/Dashboard';
 import { AdminDashboard } from './pages/AdminDashboard';
 import TermsOfService from './pages/TermsOfService';
 import FAQPage from './pages/FAQ';
+import NavigateToChrome from './components/NavigateToChrome';
 function HomePage() {
 
   const [email, setEmail] = useState('');
@@ -59,10 +60,23 @@ function HomePage() {
     }
 
   };
+
+  function isInAppBrowser() {
+  const ua = navigator.userAgent || '';
+  return (
+    ua.includes('Instagram') 
+    // ua.includes('FBAN') || ua.includes('FBAV') ||
+    // ua.includes('Twitter') ||
+    // ua.includes('Line') ||
+    // ua.includes('Snapchat')
+  );
+}
   return (
     <>
-     
-
+     {
+      !isInAppBrowser() && <NavigateToChrome/>
+     }
+        
       {/* Main Hero Section */}
       <section className="main-hero">
         <div className="main-hero__container">
