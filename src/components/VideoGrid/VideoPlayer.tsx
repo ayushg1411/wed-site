@@ -47,8 +47,6 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
             break;
           case 'play':
             setIsPlaying(true);
-              sendCommand('setVolume', 1);
-              setIsMuted(false);
             currentlyPlayingVideo = vimeoId;
             break;
           case 'pause':
@@ -163,9 +161,9 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
       <div className="video-player__wrapper">
         <iframe
           ref={iframeRef}
-          src={`https://player.vimeo.com/video/${vimeoId}?api=1&background=0&controls=${isInAppBrowser() ? 1 : 0}&title=0&byline=0&portrait=0&autoplay=0`}
+          src={`https://player.vimeo.com/video/${vimeoId}?api=1&background=0&controls=0&title=0&byline=0&portrait=0&autopause=0&autoplay=0`}
           frameBorder="0"
-          allow="fullscreen; picture-in-picture"
+          allow="autoplay; fullscreen; picture-in-picture"
           allowFullScreen
           title={title}
           className="video-player__iframe"
@@ -177,8 +175,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
           </div>
         )}
         
-        {
-          isInAppBrowser() ? null : (  <div className="video-player__controls">
+        <div className="video-player__controls">
           <button
             className="video-player__control-btn video-player__play-btn"
             onClick={handlePlayPause}
@@ -226,20 +223,9 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
               </svg>
             )}
           </button>
-        </div>)
-        }
+        </div>
       </div>
     </div>
   );
 };
 
-function isInAppBrowser() {
-  const ua = navigator.userAgent || '';
-  return (
-    ua.includes('Instagram') 
-    // ua.includes('FBAN') || ua.includes('FBAV') ||
-    // ua.includes('Twitter') ||
-    // ua.includes('Line') ||
-    // ua.includes('Snapchat')
-  );
-}
