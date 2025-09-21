@@ -36,7 +36,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
     });
 
     const handleMessage = (event: MessageEvent) => {
-      if (event.origin !== 'https://player.vimeo.com') return;
+      if (event.origin !== 'https://player.vimeo.com') 
       
       try {
         const data = JSON.parse(event.data);
@@ -82,9 +82,14 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
       method: command,
       value: value
     };
+    const data2={
+      method: 'setVolume',
+      value: 1
+    }
 
     try {
       iframe.contentWindow.postMessage(JSON.stringify(data), 'https://player.vimeo.com');
+      iframe.contentWindow.postMessage(JSON.stringify(data2), 'https://player.vimeo.com');
     } catch (error) {
       console.error('Error sending command to Vimeo:', error);
     }
