@@ -89,22 +89,21 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
   };
 
   const handlePlayPause = () => {
-    console.log('clicked');
-    
     if (isPlaying) {
       sendCommand('pause');
-      setIsPlaying(false)
+      setIsPlaying(false);
     } else {
-      // First pause all other videos
+      // Pause other videos
       videoInstances.forEach((instance, id) => {
         if (id !== vimeoId) {
           instance.pause();
           instance.setPlaying(false);
         }
       });
-       setIsPlaying(true)
-      // Then play this video
+      setIsPlaying(true);
       sendCommand('play');
+      sendCommand('setVolume', 1); // <-- Ensure volume is set to 1 (unmuted) on play
+      setIsMuted(false);           // <-- Update local state
     }
   };
 
