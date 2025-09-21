@@ -46,9 +46,9 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
             setIsLoading(false);
             break;
           case 'play':
+            setIsPlaying(true);
               sendCommand('setVolume', 1);
               setIsMuted(false);
-                      setIsPlaying(true);
             currentlyPlayingVideo = vimeoId;
             break;
           case 'pause':
@@ -82,37 +82,30 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
       method: command,
       value: value
     };
-    const data2={
-      method: 'setVolume',
-      value: 1
-    }
 
     try {
       iframe.contentWindow.postMessage(JSON.stringify(data), 'https://player.vimeo.com');
-      iframe.contentWindow.postMessage(JSON.stringify(data2), 'https://player.vimeo.com');
     } catch (error) {
       console.error('Error sending command to Vimeo:', error);
     }
   };
 
-const handlePlayPause = () => {
-  if (isPlaying) {
-    sendCommand('pause');
-    setIsPlaying(false);
-  } else {
-    // pause other videos
-    videoInstances.forEach((instance, id) => {
-      if (id !== vimeoId) {
-        instance.pause();
-        instance.setPlaying(false);
-      }
-    });
-    // Important: send play first, then set state
-    sendCommand('play');
-    setIsPlaying(true);
-  }
-};
-
+  const handlePlayPause = () => {
+    if (isPlaying) {
+      sendCommand('pause');
+      setIsPlaying(false);
+    } else {
+      // Pause other videos
+      videoInstances.forEach((instance, id) => {
+        if (id !== vimeoId) {
+          instance.pause();
+          instance.setPlaying(false);
+        }
+      });
+      setIsPlaying(true);
+      sendCommand('play');
+  };
+}
 
   
   
@@ -168,17 +161,15 @@ const handlePlayPause = () => {
   return (
     <div className={`video-player ${className || ''}`} data-video-id={vimeoId}>
       <div className="video-player__wrapper">
-<iframe
-  ref={iframeRef}
-  src={`https://player.vimeo.com/video/${vimeoId}?api=1&background=0&controls=1&title=0&byline=0&portrait=0&autoplay=0`}
-  frameBorder="0"
-  allow="autoplay; fullscreen; picture-in-picture; encrypted-media; playsinline"
-  allowFullScreen
-  title={title}
-  className="video-player__iframe"
-/>
-
-
+        <iframe
+          ref={iframeRef}
+          src={`https://player.vimeo.com/video/${vimeoId}?api=1&background=0&controls=${isInAppBrowser() ? 1 : 0}&title=0&byline=0&portrait=0&autoplay=0`}
+          frameBorder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowFullScreen
+          title={title}
+          className="video-player__iframe"
+        />
         
         {isLoading && (
           <div className="video-player__loading">
@@ -186,7 +177,8 @@ const handlePlayPause = () => {
           </div>
         )}
         
- <div className="video-player__controls">
+        {
+          isInAppBrowser() ? null : (  <div className="video-player__controls">
           <button
             className="video-player__control-btn video-player__play-btn"
             onClick={handlePlayPause}
@@ -234,7 +226,8 @@ const handlePlayPause = () => {
               </svg>
             )}
           </button>
-        </div>
+        </div>)
+        }
       </div>
     </div>
   );
