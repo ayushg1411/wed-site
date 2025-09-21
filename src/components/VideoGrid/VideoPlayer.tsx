@@ -47,8 +47,6 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
             break;
           case 'play':
             setIsPlaying(true);
-              sendCommand('setVolume', 1);
-              setIsMuted(false);
             currentlyPlayingVideo = vimeoId;
             break;
           case 'pause':
@@ -163,7 +161,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
       <div className="video-player__wrapper">
         <iframe
           ref={iframeRef}
-          src={`https://player.vimeo.com/video/${vimeoId}?api=1&background=0&controls=${isInAppBrowser() ? 1 : 0}&title=0&byline=0&portrait=0&muted=0&autoplay=0`}
+          src={`https://player.vimeo.com/video/${vimeoId}?api=1&background=0&controls=${isInAppBrowser() ? 1 : 0}&title=0&byline=0&portrait=0&autopause=0&autoplay=0`}
           frameBorder="0"
           allow="autoplay; fullscreen; picture-in-picture"
           allowFullScreen
