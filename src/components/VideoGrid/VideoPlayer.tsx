@@ -75,7 +75,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
     };
   }, [vimeoId]);
 
-  const sendCommand = (command: string, value?: any) => {
+  const sendCommand = (command: string, value?: any, third?: any) => {
     const iframe = iframeRef.current;
     if (!iframe || !iframe.contentWindow) return;
 
@@ -83,14 +83,15 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
       method: command,
       value: value
     };
-    const data2={
-      method: 'setVolume',
-      value: 1
-    }
 
     try {
       iframe.contentWindow.postMessage(JSON.stringify(data), 'https://player.vimeo.com');
-      iframe.contentWindow.postMessage(JSON.stringify(data2), 'https://player.vimeo.com');
+   if (third) {
+    iframe.contentWindow.postMessage(
+      JSON.stringify({ method: 'setVolume', value: 1 }),
+      'https://player.vimeo.com'
+    );
+  }
     } catch (error) {
       console.error('Error sending command to Vimeo:', error);
     }
@@ -109,7 +110,7 @@ const handlePlayPause = () => {
       }
     });
     // Important: send play first, then set state
-    sendCommand('play');
+sendCommand('play', undefined, true);
     setIsPlaying(true);
   }
 };
