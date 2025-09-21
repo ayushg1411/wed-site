@@ -178,7 +178,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
         )}
         
         {
-          isInAppBrowser() ? null : (  <div className="video-player__controls">
+          !isInAppBrowser() ? null : (  <div className="video-player__controls">
           <button
             className="video-player__control-btn video-player__play-btn"
             onClick={handlePlayPause}
