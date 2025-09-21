@@ -36,7 +36,8 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
     });
 
     const handleMessage = (event: MessageEvent) => {
-      if (event.origin !== 'https://player.vimeo.com') 
+      console.log(event.origin, 'origin')
+      if (event.origin !== 'https://player.vimeo.com') return;
       
       try {
         const data = JSON.parse(event.data);
