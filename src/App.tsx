@@ -74,7 +74,7 @@ function HomePage() {
   return (
     <>
      {
-      !isInAppBrowser() && <NavigateToChrome/>
+      isInAppBrowser() && <NavigateToChrome/>
      }
         
       {/* Main Hero Section */}
