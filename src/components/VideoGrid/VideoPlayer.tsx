@@ -186,7 +186,7 @@ const handlePlayPause = () => {
           </div>
         )}
         
-   {isInAppBrowser() ? null :  <div className="video-player__controls">
+ <div className="video-player__controls">
           <button
             className="video-player__control-btn video-player__play-btn"
             onClick={handlePlayPause}
@@ -234,7 +234,7 @@ const handlePlayPause = () => {
               </svg>
             )}
           </button>
-        </div>}
+        </div>
       </div>
     </div>
   );
