@@ -66,6 +66,19 @@ export const sampleVideos = [
     tier: VIDEO_TIERS.PREMIUM,
     code: 'VIDP03'
   },
+  {
+    id: '4b',
+    vimeoId: '1120367944',
+    title: 'Premium Sikh Wedding Invite',
+    description: 'Elite and luxury invite designed for top-class celebrations.',
+    duration: '0:53',
+    pages: 9,
+    price: 1499,
+    originalPrice: 1699,
+    categories: [CATEGORIES.HINDU_WEDDING_CARDS, CATEGORIES.WEDDING],
+    tier: VIDEO_TIERS.PREMIUM,
+    code: 'VIDP02'
+  },
     {
     id: 'a4',
     vimeoId: '1121191856',
