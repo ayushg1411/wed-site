@@ -67,7 +67,7 @@ export const sampleVideos = [
     code: 'VIDP03'
   },
     {
-    id: '4a',
+    id: 'a4',
     vimeoId: '1121191856',
     title: 'Sleek Wedding ceremony Invite',
     description: 'Modern Wedding card design with minimalistic fonts.',
