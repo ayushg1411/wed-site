@@ -66,6 +66,19 @@ export const sampleVideos = [
     tier: VIDEO_TIERS.PREMIUM,
     code: 'VIDP03'
   },
+    {
+    id: '4a',
+    vimeoId: '1121191856',
+    title: 'Sleek Wedding ceremony Invite',
+    description: 'Modern Wedding card design with minimalistic fonts.',
+    duration: '0:23',
+    pages: 4,
+    price: 799,
+    originalPrice: 999,
+    categories: [CATEGORIES.HINDU_WEDDING_CARDS, CATEGORIES.WEDDING],
+    tier: VIDEO_TIERS.SILVER,
+    code: 'VIDS05'
+  },
   {
     id: '5',
     vimeoId: '1116372967',
