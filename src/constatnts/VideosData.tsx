@@ -222,4 +222,30 @@ export const sampleVideos = [
     tier: VIDEO_TIERS.BASIC,
     code: 'VIDB05'
   },
+  {
+    id: '16',
+    vimeoId: '1121595675',
+    title: 'Stylish Save-the-date Invitation',
+    description: 'Sleek video invite with a touch of style.',
+    duration: '0:24',
+    pages: 6,
+    price: 249,
+    originalPrice: 299,
+    categories: [CATEGORIES.SAVE_THE_DATE],
+    tier: VIDEO_TIERS.GOLD,
+    code: 'VIDG02'
+  },
+   {
+    id: '17',
+    vimeoId: '1121618383',
+    title: 'Sweet Wedding Announcement Card',
+    description: 'A lighthearted and elegant card for wedding event.',
+    duration: '0:23',
+    pages: 6,
+    price: 249,
+    originalPrice: 299,
+    categories: [CATEGORIES.SAVE_THE_DATE],
+    tier: VIDEO_TIERS.GOLD,
+    code: 'VIDG03'
+  },
 ];
