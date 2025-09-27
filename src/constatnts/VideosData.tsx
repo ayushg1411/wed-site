@@ -1,7 +1,7 @@
 import { CATEGORIES, VIDEO_TIERS } from './Categories';
 
 export const sampleVideos = [
-    {
+  {
     id: '1',
     vimeoId: '1120367976',
     title: 'Designer Premium Wedding Story Invite',
@@ -13,19 +13,6 @@ export const sampleVideos = [
     categories: [CATEGORIES.HINDU_WEDDING_CARDS, CATEGORIES.WEDDING],
     tier: VIDEO_TIERS.PREMIUM,
     code: 'VIDP04'
-  },
-  {
-    id: '16',
-    vimeoId: '1120465443',
-    title: 'Royal Rajasthani Wedding Invite',
-    description: 'Platinum-style wedding invite with premium luxury feel.',
-    duration: '1:15',
-    pages: 10,
-    price: 1599,
-    originalPrice: 2199,
-    categories: [CATEGORIES.HINDU_WEDDING_CARDS, CATEGORIES.WEDDING],
-    tier: VIDEO_TIERS.PREMIUM,
-    code: 'VIDP05'
   },
   {
     id: '2',
@@ -66,32 +53,6 @@ export const sampleVideos = [
     tier: VIDEO_TIERS.PREMIUM,
     code: 'VIDP03'
   },
-    {
-    id: 'a4',
-    vimeoId: '1121191856',
-    title: 'Sleek Wedding ceremony Invite',
-    description: 'Modern Wedding card design with minimalistic fonts.',
-    duration: '0:23',
-    pages: 4,
-    price: 699,
-    originalPrice: 899,
-    categories: [CATEGORIES.HINDU_WEDDING_CARDS, CATEGORIES.WEDDING],
-    tier: VIDEO_TIERS.SILVER,
-    code: 'VIDS05'
-  },
-  {
-    id: '20',
-    vimeoId: '1122500790',
-    title: 'Polished Digital Wedding Card',
-    description: 'Neat, stylish, and modern digital card for wedding.',
-    duration: '0:23',
-    pages: 4,
-    price: 699,
-    originalPrice: 899,
-    categories: [CATEGORIES.WEDDING, CATEGORIES.SAVE_THE_DATE],
-    tier: VIDEO_TIERS.SILVER,
-    code: 'VIDS08'
-  },
   {
     id: '5',
     vimeoId: '1116372967',
@@ -105,7 +66,7 @@ export const sampleVideos = [
     tier: VIDEO_TIERS.BASIC,
     code: 'VIDB01'
   },
-    {
+  {
     id: '6',
     vimeoId: '1116372823',
     title: 'Simple Hindu Wedding Invitation',
@@ -114,22 +75,22 @@ export const sampleVideos = [
     pages: 4,
     price: 499,
     originalPrice: 699,
-    categories: [CATEGORIES.HINDU_WEDDING_CARDS],
+    categories: [CATEGORIES.HINDU_WEDDING_CARDS, CATEGORIES.WEDDING],
     tier: VIDEO_TIERS.SILVER,
     code: 'VIDS02'
   },
   {
     id: '7',
-    vimeoId: '1116373042',
-    title: 'Royal Muslim Digital Invite',
-    description: 'muslim themed card for grand wedding ceremony',
-    duration: '0:31',
-    pages: 6,
-    price: 799,
-    originalPrice: 999,
-    categories: [CATEGORIES.MUSLIM_WEDDING_CARDS],
-    tier: VIDEO_TIERS.GOLD,
-    code: 'VIDG01'
+    vimeoId: '1120465443',
+    title: 'Royal Rajasthani Wedding Invite',
+    description: 'Platinum-style wedding invite with premium luxury feel.',
+    duration: '1:15',
+    pages: 10,
+    price: 1599,
+    originalPrice: 2199,
+    categories: [CATEGORIES.HINDU_WEDDING_CARDS, CATEGORIES.WEDDING],
+    tier: VIDEO_TIERS.PREMIUM,
+    code: 'VIDP05'
   },
   {
     id: '8',
@@ -218,7 +179,7 @@ export const sampleVideos = [
     pages: 4,
     price: 499,
     originalPrice: 599,
-    categories: [CATEGORIES.MUSLIM_WEDDING_CARDS],
+    categories: [CATEGORIES.MUSLIM_WEDDING_CARDS, CATEGORIES.WEDDING],
     tier: VIDEO_TIERS.SILVER,
     code: 'VIDS03'
   },
@@ -231,7 +192,7 @@ export const sampleVideos = [
     pages: 3,
     price: 299,
     originalPrice: 399,
-    categories: [CATEGORIES.HINDU_WEDDING_CARDS],
+    categories: [CATEGORIES.HINDU_WEDDING_CARDS, CATEGORIES.WEDDING],
     tier: VIDEO_TIERS.BASIC,
     code: 'VIDB05'
   },
@@ -248,7 +209,7 @@ export const sampleVideos = [
     tier: VIDEO_TIERS.SILVER,
     code: 'VIDS06'
   },
-   {
+  {
     id: '17',
     vimeoId: '1121618383',
     title: 'Sweet Wedding Announcement Card',
@@ -261,7 +222,7 @@ export const sampleVideos = [
     tier: VIDEO_TIERS.SILVER,
     code: 'VIDS07'
   },
-    {
+  {
     id: '18',
     vimeoId: '1122496235',
     title: 'Modern Celebration Template',
@@ -277,7 +238,7 @@ export const sampleVideos = [
   {
     id: '19',
     vimeoId: '1122499638',
-    title: 'Regal Digital Ceremony Invite',
+    title: 'Regal Digital Engagement Ceremony Invite',
     description: 'Elegant royal style card for ceremonies.',
     duration: '0:26',
     pages: 4,
@@ -287,5 +248,67 @@ export const sampleVideos = [
     tier: VIDEO_TIERS.GOLD,
     code: 'VIDG03'
   },
-  
+  {
+    id: '20',
+    vimeoId: '1122500790',
+    title: 'Polished Digital Wedding Card',
+    description: 'Neat, stylish, and modern digital card for wedding.',
+    duration: '0:23',
+    pages: 4,
+    price: 699,
+    originalPrice: 899,
+    categories: [CATEGORIES.WEDDING, CATEGORIES.HINDU_WEDDING_CARDS],
+    tier: VIDEO_TIERS.SILVER,
+    code: 'VIDS08'
+  },
+  {
+    id: '21',
+    vimeoId: '1116373042',
+    title: 'Royal Muslim Digital Invite',
+    description: 'muslim themed card for grand wedding ceremony',
+    duration: '0:31',
+    pages: 6,
+    price: 799,
+    originalPrice: 999,
+    categories: [CATEGORIES.MUSLIM_WEDDING_CARDS, CATEGORIES.WEDDING],
+    tier: VIDEO_TIERS.GOLD,
+    code: 'VIDG01'
+  },
+  {
+    id: '22',
+    vimeoId: '1121191856',
+    title: 'Sleek Wedding ceremony Invite',
+    description: 'Modern Wedding card design with minimalistic fonts.',
+    duration: '0:23',
+    pages: 4,
+    price: 699,
+    originalPrice: 899,
+    categories: [CATEGORIES.HINDU_WEDDING_CARDS, CATEGORIES.WEDDING],
+    tier: VIDEO_TIERS.SILVER,
+    code: 'VIDS05'
+  },
+
 ];
+
+export const VideosTitle = {
+  'weddingVideos': 'Wedding Videos',
+  'saveTheDateVideos': 'Save The Date Videos',
+  'engagementVideos': 'Engagement Videos',
+  'mehandiVideos': 'Mehandi Videos',
+  'sangeetVideos': 'Sangeet Videos',
+  'groomToBeVideos': 'Groom To Be Videos',
+  'brideToBeVideos': 'Bride To Be Videos',
+  'muslimWeddingVideos': 'Muslim Wedding Videos',
+  'hinduWeddingVideos': 'Hindu Wedding Videos'
+};
+export const WeddingVideos = sampleVideos.filter(video => video.categories.includes(CATEGORIES.WEDDING));
+export const SaveTheDateVideos = sampleVideos.filter(video => video.categories.includes(CATEGORIES.SAVE_THE_DATE));
+export const EngagementVideos = sampleVideos.filter(video => video.categories.includes(CATEGORIES.ENGAGEMENT_CEREMONY));
+export const MehandiVideos = sampleVideos.filter(video => video.categories.includes(CATEGORIES.MEHNDI_CEREMONY));
+export const SangeetVideos = sampleVideos.filter(video => video.categories.includes(CATEGORIES.SANGEET_CEREMONY));
+export const GroomToBeVideos = sampleVideos.filter(video => video.categories.includes(CATEGORIES.GROOM_TO_BE));
+export const BrideToBeVideos = sampleVideos.filter(video => video.categories.includes(CATEGORIES.BRIDE_TO_BE));
+export const MuslimWeddingVideos = sampleVideos.filter(video => video.categories.includes(CATEGORIES.MUSLIM_WEDDING_CARDS));
+export const HinduWeddingVideos = sampleVideos.filter(video => video.categories.includes(CATEGORIES.HINDU_WEDDING_CARDS));
+export const HaldiVideos = sampleVideos.filter(video => video.categories.includes(CATEGORIES.HALDI_CEREMONY));
+export const AnneversaryVideos = sampleVideos.filter(video => video.categories.includes(CATEGORIES.ANNIVERSARY));

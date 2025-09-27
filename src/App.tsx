@@ -10,7 +10,7 @@ import CategoryComponent from './categories/CategoryComponent';
 import { ImageCarousel } from './components/ImageCarousel/ImageCarousel';
 import { ContactUs } from './pages/ContactUs';
 
-import { sampleVideos } from './constatnts/VideosData';
+import { EngagementVideos, MehandiVideos, MuslimWeddingVideos, SangeetVideos, SaveTheDateVideos, VideosTitle, WeddingVideos } from './constatnts/VideosData';
 import { carouselImages } from './constants/CarouselData';
 import { Reviews } from './pages/Reviews';
 import WhatsappButton from './components/Footer/WhatsappButton';
@@ -187,10 +187,43 @@ Showcase your love story with a personalized video clips, heartfelt text, and th
         showArrows={false}
       />
  <WhatsappButton phoneNumber='7017835443'/>
-      <VideoGrid
-        videos={sampleVideos.slice(0, 12)}
-        title="Digital Wedding Invitations"
+     {
+      WeddingVideos.length > 2 && <VideoGrid
+        videos={WeddingVideos.slice(0, 6)}
+        title={VideosTitle.weddingVideos}
       />
+     }
+     {
+      EngagementVideos.length > 2 && <VideoGrid
+        videos={EngagementVideos.slice(0, 3)}
+        title={VideosTitle.engagementVideos}
+      />
+     }
+     {
+      MuslimWeddingVideos.length > 2 && <VideoGrid
+        videos={MuslimWeddingVideos.slice(0, 3)}
+        title={VideosTitle.muslimWeddingVideos}
+      />
+     }
+     {
+      SaveTheDateVideos.length > 2 && <VideoGrid
+        videos={SaveTheDateVideos.slice(0, 3)}
+        title={VideosTitle.saveTheDateVideos}
+      />
+     }
+     {
+      MehandiVideos.length > 2 && <VideoGrid
+        videos={MehandiVideos.slice(0, 3)}
+        title={VideosTitle.mehandiVideos}
+      />
+     }
+     {
+      SangeetVideos.length > 2 && <VideoGrid
+        videos={SangeetVideos.slice(0, 3)}
+        title={VideosTitle.sangeetVideos}
+      />
+     }
+     
       <div className="explore-categories-banner">
   <div className="explore-categories-content">
    
