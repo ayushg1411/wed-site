@@ -226,11 +226,15 @@
   
   .video-grid__content {
     gap: 1.5rem;
+    display:flex;
+    flex-direction: row;
+    overflow-x: scroll;
   }
   
   .video-grid__item {
-    width: calc(100vw - 2rem);
+    min-width: 400;
     margin: 0 auto;
+    min-width: 400px
   }
   
   .video-grid__wrapper {
