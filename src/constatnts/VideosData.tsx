@@ -34,8 +34,8 @@ export const sampleVideos = [
     description: 'Exclusive luxury card made for your grand occasions.',
     duration: '1:09',
     pages: 8,
-    price: 1199,
-    originalPrice: 2499,
+    price: 1399,
+    originalPrice: 1599,
     categories: [CATEGORIES.HINDU_WEDDING_CARDS, CATEGORIES.WEDDING],
     tier: VIDEO_TIERS.PREMIUM,
     code: 'VIDP01'
@@ -73,11 +73,24 @@ export const sampleVideos = [
     description: 'Modern Wedding card design with minimalistic fonts.',
     duration: '0:23',
     pages: 4,
-    price: 799,
-    originalPrice: 999,
+    price: 699,
+    originalPrice: 899,
     categories: [CATEGORIES.HINDU_WEDDING_CARDS, CATEGORIES.WEDDING],
     tier: VIDEO_TIERS.SILVER,
     code: 'VIDS05'
+  },
+  {
+    id: '20',
+    vimeoId: '1122500790',
+    title: 'Polished Digital Wedding Card',
+    description: 'Neat, stylish, and modern digital card for wedding.',
+    duration: '0:23',
+    pages: 4,
+    price: 699,
+    originalPrice: 899,
+    categories: [CATEGORIES.WEDDING, CATEGORIES.SAVE_THE_DATE],
+    tier: VIDEO_TIERS.SILVER,
+    code: 'VIDS08'
   },
   {
     id: '5',
@@ -261,4 +274,18 @@ export const sampleVideos = [
     tier: VIDEO_TIERS.GOLD,
     code: 'VIDG02'
   },
+  {
+    id: '19',
+    vimeoId: '1122499638',
+    title: 'Regal Digital Ceremony Invite',
+    description: 'Elegant royal style card for ceremonies.',
+    duration: '0:26',
+    pages: 4,
+    price: 799,
+    originalPrice: 999,
+    categories: [CATEGORIES.ENGAGEMENT_CEREMONY],
+    tier: VIDEO_TIERS.GOLD,
+    code: 'VIDG03'
+  },
+  
 ];
