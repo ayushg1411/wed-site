@@ -232,8 +232,8 @@ export const sampleVideos = [
     price: 249,
     originalPrice: 299,
     categories: [CATEGORIES.SAVE_THE_DATE],
-    tier: VIDEO_TIERS.GOLD,
-    code: 'VIDG02'
+    tier: VIDEO_TIERS.SILVER,
+    code: 'VIDS06'
   },
    {
     id: '17',
@@ -245,7 +245,20 @@ export const sampleVideos = [
     price: 249,
     originalPrice: 299,
     categories: [CATEGORIES.SAVE_THE_DATE],
+    tier: VIDEO_TIERS.SILVER,
+    code: 'VIDS07'
+  },
+    {
+    id: '18',
+    vimeoId: '1122496235',
+    title: 'Modern Celebration Template',
+    description: 'Trendy card with updated look and layout.',
+    duration: '0:25',
+    pages: 4,
+    price: 499,
+    originalPrice: 599,
+    categories: [CATEGORIES.SAVE_THE_DATE],
     tier: VIDEO_TIERS.GOLD,
-    code: 'VIDG03'
+    code: 'VIDG02'
   },
 ];
