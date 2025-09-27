@@ -21,8 +21,8 @@ export const sampleVideos = [
     description: 'Platinum-style wedding invite with premium luxury feel.',
     duration: '1:15',
     pages: 10,
-    price: 1999,
-    originalPrice: 2399,
+    price: 1599,
+    originalPrice: 2199,
     categories: [CATEGORIES.HINDU_WEDDING_CARDS, CATEGORIES.WEDDING],
     tier: VIDEO_TIERS.PREMIUM,
     code: 'VIDP05'
