@@ -111,7 +111,7 @@ const path = window.location.pathname;  // e
       <header className={`header ${isScrolled ? 'header--scrolled' : ''} ${className || ''}`}>
        { path.length==1 &&   <div className="promo-banner">
   <span className="promo-banner__icons">
-    <a href="https://www.instagram.com/gathbandhhan" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+    <a href="https://www.instagram.com/gathbandhan.invites" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="6" stroke="#fff" strokeWidth="2"/><circle cx="12" cy="12" r="4" stroke="#fff" strokeWidth="2"/><circle cx="17" cy="7" r="1.5" fill="#fff"/></svg>
     </a>
     <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
