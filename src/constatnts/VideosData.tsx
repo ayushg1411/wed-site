@@ -34,8 +34,8 @@ export const sampleVideos = [
     description: 'Elite and luxury invite designed for top-class celebrations.',
     duration: '0:53',
     pages: 9,
-    price: 1499,
-    originalPrice: 1699,
+    price: 1699,
+    originalPrice: 1999,
     categories: [CATEGORIES.HINDU_WEDDING_CARDS, CATEGORIES.WEDDING],
     tier: VIDEO_TIERS.PREMIUM,
     code: 'VIDP02'
